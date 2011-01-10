@@ -22,7 +22,7 @@ namespace net_oatsnet_class_datastructures {
 
       /* see if name is duplicated or not, if so return DUPLICATE_NAME */
       for (int i = 0; i < Bank::MAX_ACCOUNTS; i++) {
-         if ( (accountValid[i] == true) and (accounts[i].getName() == name)) {
+         if ( (accountValid[i] == true) && (accounts[i].getName() == name)) {
             return Bank::DUPLICATE_NAME;
          }
       }
@@ -76,7 +76,14 @@ namespace net_oatsnet_class_datastructures {
    }
 
    unsigned long long Bank::getTotalAccountValues() {
-      return 0;
+      unsigned long long total = 0;
+      for (int i = 0; i < Bank::MAX_ACCOUNTS; i++) {
+         if (accountValid[i] == true) {
+            total += accounts[i].getTotalAccountValue();
+         }
+      }
+
+      return total;
    }
 
    void Bank::printAllAccounts() {
