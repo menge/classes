@@ -14,18 +14,67 @@ int main(int argc, char **argv) {
    while (!done) {
       char command;
 
-      cout << "Enter command ( [q]uit ): " << endl;
+      cout << "Enter command ( [q]uit, [a]dd account ): " << endl;
       cin >> command;
 
       switch (command) {
+      case 'a':
+      case 'A':
+         {
+            int result;
+            unsigned long checkings;
+            unsigned long savings;
+            string name;
+
+            /* get information about adding an account */
+            cout << "Please enter name of account: "  << endl;
+            cin >> name;
+            cout << "Please enter the initial amount of checkings: " << endl;
+            cin >> checkings;
+            cout << "Please enter the initial amount of savings: " << endl;
+            cin >> savings;
+
+            /* add account and check for errors */
+            result = myBank.addAccount(name, checkings, savings);
+            switch (result) {
+            case Bank::TOO_MANY_ACCOUNTS:
+               {
+                  cerr << "There is no room for new accounts" << endl;
+                  break;
+               }
+            case Bank::DUPLICATE_NAME:
+               {
+                  cerr << "Account by [" << name << "] already exists" << endl;
+                  break;
+               }
+            case Bank::EMPTY_STRING:
+               {
+                  cerr << "Cannot enter account with no name information" << endl;
+                  break;
+               }
+            case Bank::NO_ERROR:
+               {
+                  /* everything is fine, nothing needed */
+                  break;
+               }
+            default:
+               {
+                  cerr << "unrecognized return value" << endl;
+                  break;
+               }
+            }
+
+            break;
+         }
       case 'q':
+      case 'Q':
          {
             done = true;
             break;
          }
       default:
          {
-            cout << "Unrecognized Command, try again" << endl;
+            cerr << "Unrecognized Command, try again" << endl;
             break;
          }
       }
