@@ -4,6 +4,9 @@ CFLAGS=-g -Wall
 
 all: bank
 
+test: bank
+	tests/run_test.sh
+
 bank: main.o Account.o Bank.o
 	$(CXX) $(CFLAGS) main.o Account.o Bank.o -o bank
 

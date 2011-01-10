@@ -1,0 +1,69 @@
+Welcome to the Bank!!
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+account[   0] is valid
+account[   0].name            = foo000
+account[   0].checkingsAmount = 1
+account[   0].savingsAmount   = 2
+account[   0].totalAmount     = 3
+account[   1] is valid
+account[   1].name            = foo001
+account[   1].checkingsAmount = 3
+account[   1].savingsAmount   = 4
+account[   1].totalAmount     = 7
+account[   2] is invalid
+account[   3] is invalid
+account[   4] is invalid
+account[   5] is invalid
+account[   6] is invalid
+account[   7] is invalid
+account[   8] is invalid
+account[   9] is invalid
+account[  10] is invalid
+account[  11] is invalid
+account[  12] is invalid
+account[  13] is invalid
+account[  14] is invalid
+account[  15] is invalid
+account[  16] is invalid
+account[  17] is invalid
+account[  18] is invalid
+account[  19] is invalid
+account[  20] is invalid
+account[  21] is invalid
+account[  22] is invalid
+account[  23] is invalid
+account[  24] is invalid
+account[  25] is invalid
+account[  26] is invalid
+account[  27] is invalid
+account[  28] is invalid
+account[  29] is invalid
+account[  30] is invalid
+account[  31] is invalid
+account[  32] is invalid
+account[  33] is invalid
+account[  34] is invalid
+account[  35] is invalid
+account[  36] is invalid
+account[  37] is invalid
+account[  38] is invalid
+account[  39] is invalid
+account[  40] is invalid
+account[  41] is invalid
+account[  42] is invalid
+account[  43] is invalid
+account[  44] is invalid
+account[  45] is invalid
+account[  46] is invalid
+account[  47] is invalid
+account[  48] is invalid
+account[  49] is invalid
+Enter command ( [q]uit, [a]dd account, [d]ebug): 

@@ -1,0 +1,458 @@
+Welcome to the Bank!!
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+!!!There is no room for new accounts
+Enter command ( [q]uit, [a]dd account, [d]ebug): 
+account[   0] is valid
+account[   0].name            = foo000
+account[   0].checkingsAmount = 1
+account[   0].savingsAmount   = 2
+account[   0].totalAmount     = 3
+account[   1] is valid
+account[   1].name            = foo001
+account[   1].checkingsAmount = 3
+account[   1].savingsAmount   = 4
+account[   1].totalAmount     = 7
+account[   2] is valid
+account[   2].name            = foo002
+account[   2].checkingsAmount = 5
+account[   2].savingsAmount   = 6
+account[   2].totalAmount     = 11
+account[   3] is valid
+account[   3].name            = foo003
+account[   3].checkingsAmount = 7
+account[   3].savingsAmount   = 8
+account[   3].totalAmount     = 15
+account[   4] is valid
+account[   4].name            = foo004
+account[   4].checkingsAmount = 9
+account[   4].savingsAmount   = 10
+account[   4].totalAmount     = 19
+account[   5] is valid
+account[   5].name            = foo005
+account[   5].checkingsAmount = 11
+account[   5].savingsAmount   = 12
+account[   5].totalAmount     = 23
+account[   6] is valid
+account[   6].name            = foo006
+account[   6].checkingsAmount = 13
+account[   6].savingsAmount   = 14
+account[   6].totalAmount     = 27
+account[   7] is valid
+account[   7].name            = foo007
+account[   7].checkingsAmount = 15
+account[   7].savingsAmount   = 16
+account[   7].totalAmount     = 31
+account[   8] is valid
+account[   8].name            = foo008
+account[   8].checkingsAmount = 17
+account[   8].savingsAmount   = 18
+account[   8].totalAmount     = 35
+account[   9] is valid
+account[   9].name            = foo009
+account[   9].checkingsAmount = 19
+account[   9].savingsAmount   = 20
+account[   9].totalAmount     = 39
+account[  10] is valid
+account[  10].name            = foo010
+account[  10].checkingsAmount = 21
+account[  10].savingsAmount   = 22
+account[  10].totalAmount     = 43
+account[  11] is valid
+account[  11].name            = foo011
+account[  11].checkingsAmount = 23
+account[  11].savingsAmount   = 24
+account[  11].totalAmount     = 47
+account[  12] is valid
+account[  12].name            = foo012
+account[  12].checkingsAmount = 25
+account[  12].savingsAmount   = 26
+account[  12].totalAmount     = 51
+account[  13] is valid
+account[  13].name            = foo013
+account[  13].checkingsAmount = 27
+account[  13].savingsAmount   = 28
+account[  13].totalAmount     = 55
+account[  14] is valid
+account[  14].name            = foo014
+account[  14].checkingsAmount = 29
+account[  14].savingsAmount   = 30
+account[  14].totalAmount     = 59
+account[  15] is valid
+account[  15].name            = foo015
+account[  15].checkingsAmount = 31
+account[  15].savingsAmount   = 32
+account[  15].totalAmount     = 63
+account[  16] is valid
+account[  16].name            = foo016
+account[  16].checkingsAmount = 33
+account[  16].savingsAmount   = 34
+account[  16].totalAmount     = 67
+account[  17] is valid
+account[  17].name            = foo017
+account[  17].checkingsAmount = 35
+account[  17].savingsAmount   = 36
+account[  17].totalAmount     = 71
+account[  18] is valid
+account[  18].name            = foo018
+account[  18].checkingsAmount = 37
+account[  18].savingsAmount   = 38
+account[  18].totalAmount     = 75
+account[  19] is valid
+account[  19].name            = foo019
+account[  19].checkingsAmount = 39
+account[  19].savingsAmount   = 40
+account[  19].totalAmount     = 79
+account[  20] is valid
+account[  20].name            = foo020
+account[  20].checkingsAmount = 41
+account[  20].savingsAmount   = 42
+account[  20].totalAmount     = 83
+account[  21] is valid
+account[  21].name            = foo021
+account[  21].checkingsAmount = 43
+account[  21].savingsAmount   = 44
+account[  21].totalAmount     = 87
+account[  22] is valid
+account[  22].name            = foo022
+account[  22].checkingsAmount = 45
+account[  22].savingsAmount   = 46
+account[  22].totalAmount     = 91
+account[  23] is valid
+account[  23].name            = foo023
+account[  23].checkingsAmount = 47
+account[  23].savingsAmount   = 48
+account[  23].totalAmount     = 95
+account[  24] is valid
+account[  24].name            = foo024
+account[  24].checkingsAmount = 49
+account[  24].savingsAmount   = 50
+account[  24].totalAmount     = 99
+account[  25] is valid
+account[  25].name            = foo025
+account[  25].checkingsAmount = 51
+account[  25].savingsAmount   = 52
+account[  25].totalAmount     = 103
+account[  26] is valid
+account[  26].name            = foo026
+account[  26].checkingsAmount = 53
+account[  26].savingsAmount   = 54
+account[  26].totalAmount     = 107
+account[  27] is valid
+account[  27].name            = foo027
+account[  27].checkingsAmount = 55
+account[  27].savingsAmount   = 56
+account[  27].totalAmount     = 111
+account[  28] is valid
+account[  28].name            = foo028
+account[  28].checkingsAmount = 57
+account[  28].savingsAmount   = 58
+account[  28].totalAmount     = 115
+account[  29] is valid
+account[  29].name            = foo029
+account[  29].checkingsAmount = 59
+account[  29].savingsAmount   = 60
+account[  29].totalAmount     = 119
+account[  30] is valid
+account[  30].name            = foo030
+account[  30].checkingsAmount = 61
+account[  30].savingsAmount   = 62
+account[  30].totalAmount     = 123
+account[  31] is valid
+account[  31].name            = foo031
+account[  31].checkingsAmount = 63
+account[  31].savingsAmount   = 64
+account[  31].totalAmount     = 127
+account[  32] is valid
+account[  32].name            = foo032
+account[  32].checkingsAmount = 65
+account[  32].savingsAmount   = 66
+account[  32].totalAmount     = 131
+account[  33] is valid
+account[  33].name            = foo033
+account[  33].checkingsAmount = 67
+account[  33].savingsAmount   = 68
+account[  33].totalAmount     = 135
+account[  34] is valid
+account[  34].name            = foo034
+account[  34].checkingsAmount = 69
+account[  34].savingsAmount   = 70
+account[  34].totalAmount     = 139
+account[  35] is valid
+account[  35].name            = foo035
+account[  35].checkingsAmount = 71
+account[  35].savingsAmount   = 72
+account[  35].totalAmount     = 143
+account[  36] is valid
+account[  36].name            = foo036
+account[  36].checkingsAmount = 73
+account[  36].savingsAmount   = 74
+account[  36].totalAmount     = 147
+account[  37] is valid
+account[  37].name            = foo037
+account[  37].checkingsAmount = 75
+account[  37].savingsAmount   = 76
+account[  37].totalAmount     = 151
+account[  38] is valid
+account[  38].name            = foo038
+account[  38].checkingsAmount = 77
+account[  38].savingsAmount   = 78
+account[  38].totalAmount     = 155
+account[  39] is valid
+account[  39].name            = foo039
+account[  39].checkingsAmount = 79
+account[  39].savingsAmount   = 80
+account[  39].totalAmount     = 159
+account[  40] is valid
+account[  40].name            = foo040
+account[  40].checkingsAmount = 81
+account[  40].savingsAmount   = 82
+account[  40].totalAmount     = 163
+account[  41] is valid
+account[  41].name            = foo041
+account[  41].checkingsAmount = 83
+account[  41].savingsAmount   = 84
+account[  41].totalAmount     = 167
+account[  42] is valid
+account[  42].name            = foo042
+account[  42].checkingsAmount = 85
+account[  42].savingsAmount   = 86
+account[  42].totalAmount     = 171
+account[  43] is valid
+account[  43].name            = foo043
+account[  43].checkingsAmount = 87
+account[  43].savingsAmount   = 88
+account[  43].totalAmount     = 175
+account[  44] is valid
+account[  44].name            = foo044
+account[  44].checkingsAmount = 89
+account[  44].savingsAmount   = 90
+account[  44].totalAmount     = 179
+account[  45] is valid
+account[  45].name            = foo045
+account[  45].checkingsAmount = 91
+account[  45].savingsAmount   = 92
+account[  45].totalAmount     = 183
+account[  46] is valid
+account[  46].name            = foo046
+account[  46].checkingsAmount = 93
+account[  46].savingsAmount   = 94
+account[  46].totalAmount     = 187
+account[  47] is valid
+account[  47].name            = foo047
+account[  47].checkingsAmount = 95
+account[  47].savingsAmount   = 96
+account[  47].totalAmount     = 191
+account[  48] is valid
+account[  48].name            = foo048
+account[  48].checkingsAmount = 97
+account[  48].savingsAmount   = 98
+account[  48].totalAmount     = 195
+account[  49] is valid
+account[  49].name            = foo049
+account[  49].checkingsAmount = 99
+account[  49].savingsAmount   = 100
+account[  49].totalAmount     = 199
+Enter command ( [q]uit, [a]dd account, [d]ebug): 

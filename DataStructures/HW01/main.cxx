@@ -39,17 +39,17 @@ int main(int argc, char **argv) {
             switch (result) {
             case Bank::TOO_MANY_ACCOUNTS:
                {
-                  cerr << "There is no room for new accounts" << endl;
+                  cerr << "!!!There is no room for new accounts" << endl;
                   break;
                }
             case Bank::DUPLICATE_NAME:
                {
-                  cerr << "Account by [" << name << "] already exists" << endl;
+                  cerr << "!!!Account by name [" << name << "] already exists" << endl;
                   break;
                }
             case Bank::EMPTY_STRING:
                {
-                  cerr << "Cannot enter account with no name information" << endl;
+                  cerr << "!!!Cannot enter account with no name information" << endl;
                   break;
                }
             case Bank::NO_ERROR:
@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
                }
             default:
                {
-                  cerr << "unrecognized return value" << endl;
+                  cerr << "!!!unrecognized return value" << endl;
                   break;
                }
             }
@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
          }
       default:
          {
-            cerr << "Unrecognized Command, try again" << endl;
+            cerr << "!!!Unrecognized Command, try again" << endl;
             break;
          }
       }
