@@ -12,11 +12,12 @@ namespace net_oatsnet_class_datastructures {
          CHECKINGS,
          SAVINGS
       };
+      Account();
       Account(string name, unsigned long checkingsAmount, unsigned long savingsAmount);
       ~Account();
       void deposit(int accountType, unsigned long amount);
       void withdraw(int accountType, unsigned long amount);
-      unsigned long getTotalAccountValue();
+      unsigned long long getTotalAccountValue();
    private:
       string name;
       unsigned long checkingsAmount;
