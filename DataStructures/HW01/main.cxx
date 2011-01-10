@@ -66,6 +66,43 @@ int main(int argc, char **argv) {
 
             break;
          }
+      case 'd':
+      case 'D':
+         {
+            string name;
+            int result;
+
+            /* get information to delete from account */
+            cout << "Please enter name of account to delete:" << endl;
+            cin >> name;
+
+            /* remove account and check for errors */
+            result = myBank.deleteAccount(name);
+            switch (result) {
+            case Bank::ACCOUNT_NOT_FOUND:
+               {
+                  cerr << "!!!Account by name [" << name << "] not found" << endl;
+                  break;
+               }
+            case Bank::EMPTY_STRING:
+               {
+                  cerr << "!!!Cannot enter account with no name information" << endl;
+                  break;
+               }
+            case Bank::NO_ERROR:
+               {
+                  /* everything is fine, nothing needed */
+                  break;
+               }
+            default:
+               {
+                  cerr << "!!!unrecognized return value" << endl;
+                  break;
+               }
+            }
+
+            break;
+         }
       case 'p':
       case 'P':
          {

@@ -47,8 +47,24 @@ namespace net_oatsnet_class_datastructures {
       /* everything is fine */
       return Bank::NO_ERROR;
    }
+
    int Bank::deleteAccount(string name) {
-      return Bank::NO_ERROR;
+      /* if passed name is invalid (empty string), return EMPTY_STRING */
+      if (name == "") {
+         return Bank::EMPTY_STRING;
+      }
+
+      /* try to find and delete*/
+      for (int i = 0; i < Bank::MAX_ACCOUNTS; i++) {
+         if ( (accountValid[i] == true) && (name == accounts[i].getName()) ) {
+            /* delete account by invalidating it making it free for further use */
+            accountValid[i] = false;
+            return Bank::NO_ERROR;
+         }
+      }
+
+      /* did not find account, thus return ACCOUNT_NOT_FOUND */
+      return Bank::ACCOUNT_NOT_FOUND;
    }
 
    int Bank::accountDeposit(string name, int accountType, unsigned long amount) {

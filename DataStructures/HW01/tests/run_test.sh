@@ -2,6 +2,8 @@
 
 EXECUTABLE=`pwd`/bank
 tempfile=`mktemp`
+passed=0
+failed=0
 
 cd tests/input
 
@@ -12,13 +14,25 @@ do
    echo -n "]: "
    $EXECUTABLE < $i &> $tempfile
 
-   diff -q $tempfile ../output/$i > /dev/null
+   diff $tempfile ../output/$i &> /dev/null
 
    if [ "$?" -eq "0" ]; then
       echo "SUCCESS"
+      passed=`expr $passed + 1`
    else
       echo "FAILURE"
+      failed=`expr $failed + 1`
    fi
 
    rm $tempfile
 done
+
+total=`expr $passed + $failed`
+echo "$passed/$total test(s) passed"
+echo "$failed/$total test(s) failed"
+
+if [ "$failed" -ne "0" ]; then
+   exit 1
+fi
+
+exit 0

@@ -15,5 +15,29 @@ print_empty_001.txt:
    Testing to make sure all accounts invalid after initialization
 >>>TODO<<<
    Test for empty name... cannot test via current input method
->>>TODO<<<
-   Test for adding duplicate (of end) after deleting in the middle
+del_account_001.txt:
+   Test for normal deletion of one account
+del_account_002.txt:
+   Test for normal deletion of all accounts (of 5 in ascending order)
+del_account_003.txt:
+   Test for normal deletion of all accounts (of 5 in descending order)
+del_account_004.txt:
+   create 50 accounts, delete one (first)
+del_account_005.txt:
+   create 50 accounts, delete one (middle)
+del_account_006.txt:
+   create 50 accounts, delete one (last)
+del_account_007.txt:
+   delete account with none around
+del_account_008.txt:
+   after adding account, delete twice
+del_account_009.txt:
+   create 50 accounts, delete middle, add again
+del_account_010.txt:
+   create 50 accounts, delete middle, add duplicate (before)
+del_account_011.txt:
+   create 50 accounts, delete middle, add duplicate (after)
+del_account_012.txt:
+   create 50 accounts, delete middle, add duplicate (after), then add unique in empty slot
+del_account_013.txt:
+   create 50 accounts, delete middle, add duplicate (after), then add unique in empty slot, add another and expect add error
