@@ -12,8 +12,23 @@ int main(int argc, char **argv) {
    cout << "Welcome to the Bank!!" << endl;
 
    while (!done) {
-      cout << "Enter command: " << endl;
-      done = true;
+      char command;
+
+      cout << "Enter command ( [q]uit ): " << endl;
+      cin >> command;
+
+      switch (command) {
+      case 'q':
+         {
+            done = true;
+            break;
+         }
+      default:
+         {
+            cout << "Unrecognized Command, try again" << endl;
+            break;
+         }
+      }
    }
 
    return EXIT_SUCCESS;
