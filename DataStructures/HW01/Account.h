@@ -18,6 +18,8 @@ namespace net_oatsnet_class_datastructures {
       void deposit(int accountType, unsigned long amount);
       void withdraw(int accountType, unsigned long amount);
       unsigned long long getTotalAccountValue();
+      unsigned long getCheckingsAmount();
+      unsigned long getSavingsAmount();
       string getName();
    private:
       string name;

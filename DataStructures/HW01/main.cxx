@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
    while (!done) {
       char command;
 
-      cout << "Enter command ( [q]uit, [a]dd account ): " << endl;
+      cout << "Enter command ( [q]uit, [a]dd account, [d]ebug): " << endl;
       cin >> command;
 
       switch (command) {
@@ -64,6 +64,12 @@ int main(int argc, char **argv) {
                }
             }
 
+            break;
+         }
+      case 'd':
+      case 'D':
+         {
+            myBank.printAllAccounts();
             break;
          }
       case 'q':

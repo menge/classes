@@ -23,7 +23,15 @@ namespace net_oatsnet_class_datastructures {
    }
 
    unsigned long long Account::getTotalAccountValue() {
-      return 0;
+      return (unsigned long long) checkingsAmount + (unsigned long long) savingsAmount;
+   }
+
+   unsigned long Account::getCheckingsAmount() {
+      return checkingsAmount;
+   }
+
+   unsigned long Account::getSavingsAmount() {
+      return savingsAmount;
    }
 
    string Account::getName() {

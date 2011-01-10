@@ -1,5 +1,7 @@
 #include "Bank.h"
 
+#include <stdio.h> // for printf
+
 namespace net_oatsnet_class_datastructures {
    Bank::Bank() {
       for (int i = 0; i < Bank::MAX_ACCOUNTS; i++) {
@@ -62,5 +64,17 @@ namespace net_oatsnet_class_datastructures {
    }
 
    void Bank::printAllAccounts() {
+      for (int i = 0; i < Bank::MAX_ACCOUNTS; i++) {
+         if (accountValid[i] == false) {
+            printf("account[%4u] is invalid\n", i);
+         }
+         else {
+            printf("account[%4u] is valid\n", i);
+            printf("account[%4u].name            = %s\n", i, accounts[i].getName().c_str());
+            printf("account[%4u].checkingsAmount = %lu\n", i, accounts[i].getCheckingsAmount());
+            printf("account[%4u].savingsAmount   = %lu\n", i, accounts[i].getSavingsAmount());
+            printf("account[%4u].totalAmount     = %llu\n", i, accounts[i].getTotalAccountValue());
+         }
+      }
    }
 }
