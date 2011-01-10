@@ -1,205 +1,205 @@
 Welcome to the Bank!!
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 Please enter name of account: 
 Please enter the initial amount of checkings: 
 Please enter the initial amount of savings: 
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 account[   0] is valid
 account[   0].name            = foo000
 account[   0].checkingsAmount = 1
@@ -450,4 +450,4 @@ account[  49].name            = foo049
 account[  49].checkingsAmount = 99
 account[  49].savingsAmount   = 100
 account[  49].totalAmount     = 199
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 

@@ -1,5 +1,5 @@
 Welcome to the Bank!!
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
 account[   0] is invalid
 account[   1] is invalid
 account[   2] is invalid
@@ -50,4 +50,4 @@ account[  46] is invalid
 account[  47] is invalid
 account[  48] is invalid
 account[  49] is invalid
-Enter command ( [q]uit, [a]dd account, [d]ebug): 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
