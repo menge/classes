@@ -39,6 +39,23 @@ namespace net_oatsnet_class_datastructures {
    }
 
    void Account::withdraw(int accountType, unsigned long amount) {
+      switch(accountType) {
+      case Account::CHECKINGS:
+         {
+            checkingsAmount -= amount;
+            break;
+         }
+      case Account::SAVINGS:
+         {
+            savingsAmount -= amount;
+            break;
+         }
+      default:
+         {
+            assert(false);
+            break;
+         }
+      }
    }
 
    unsigned long long Account::getTotalAccountValue() {

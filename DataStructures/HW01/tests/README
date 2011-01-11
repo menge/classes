@@ -11,10 +11,13 @@ add_account_008.txt:
    Testing for adding too many accounts
 add_account_009.txt:
    Testing for adding duplicate name
+
 print_empty_001.txt:
    Testing to make sure all accounts invalid after initialization
+
 >>>TODO<<<
    Test for empty name... cannot test via current input method
+
 del_account_001.txt:
    Test for normal deletion of one account
 del_account_002.txt:
@@ -41,6 +44,7 @@ del_account_012.txt:
    create 50 accounts, delete middle, add duplicate (after), then add unique in empty slot
 del_account_013.txt:
    create 50 accounts, delete middle, add duplicate (after), then add unique in empty slot, add another and expect add error
+
 get_value_001.txt:
    get value of accounts in bank with no accounts (initial)
 get_value_002.txt:
@@ -61,6 +65,7 @@ get_value_009.txt:
    get value of accounts in bank with all accounts at max value
 get_value_010.txt:
    get value of 50 accounts, and then delete one account, and check get value again
+
 deposit_001.txt:
    create account, and deposit to checkings
 deposit_002.txt:
@@ -76,8 +81,27 @@ deposit_006.txt:
 deposit_007.txt:
    attempt to deposit to make it wrap to 0, and should see failure
 deposit_008.txt:
-   attempt to deposit to to make it wrap to >0, but <currAmount, and should see failure
+   attempt to deposit to make it wrap to >0, but <currAmount, and should see failure
 deposit_009.txt:
    attempt to deposit 0 in checkings
 deposit_010.txt:
    attempt to deposit 0 in savings
+
+withdraw_001.txt:
+   create account, and withdraw from checkings
+withdraw_002.txt:
+   create account, and withdraw from savings
+withdraw_003.txt:
+   create multiple account, and withdraw from checkings
+withdraw_004.txt:
+   create multiple account, and withdraw from savings
+withdraw_005.txt:
+   attempt to withdraw from non-existent account
+withdraw_006.txt:
+   attempt to withdraw from make it border 0 (remove all funds)
+withdraw_007.txt:
+   attempt to withdraw more than account has... should see failure
+withdraw_008.txt:
+   attempt to withdraw 0 in checkings
+withdraw_009.txt:
+   attempt to withdraw 0 in savings

@@ -194,6 +194,78 @@ int main(int argc, char **argv) {
             done = true;
             break;
          }
+      case 'w':
+      case 'W':
+         {
+            string name;
+            char checkingsOrSavings;
+            unsigned int amount;
+            int accountType;
+            bool okay = true;
+
+            cout << "Please enter name of account to withdraw from: " << endl;
+            cin >> name;
+            cout << "Please enter the type of account [(c)heckings, (s)avings]: " << endl;
+            cin >> checkingsOrSavings;
+            cout << "Please enter the amount: " << endl;
+            cin >> amount;
+
+            switch (checkingsOrSavings) {
+            case 'c':
+            case 'C':
+               {
+                  accountType = Account::CHECKINGS;
+                  break;
+               }
+            case 's':
+            case 'S':
+               {
+                  accountType = Account::SAVINGS;
+                  break;
+               }
+            default:
+               {
+                  cerr << "Invalid entry for account type" << endl;
+                  okay = false;
+                  break;
+               }
+            }
+
+            if (okay) {
+               int result;
+
+               result = myBank.accountWithdraw(name, accountType, amount);
+
+               switch (result) {
+               case Bank::ACCOUNT_NOT_FOUND:
+                  {
+                     cerr << "!!!Account by name [" << name << "] not found" << endl;
+                     break;
+                  }
+               case Bank::EMPTY_STRING:
+                  {
+                     cerr << "!!!Cannot enter account with no name information" << endl;
+                     break;
+                  }
+               case Bank::INSUFFICIENT_FUNDS:
+                  {
+                     cerr << "!!!Not enough funds, would result in underflow" << endl;
+                     break;
+                  }
+               case Bank::NO_ERROR:
+                  {
+                     /* everything is fine, nothing needed */
+                     break;
+                  }
+               default:
+                  {
+                     cerr << "!!!unrecognized return value" << endl;
+                     break;
+                  }
+               }
+            }
+            break;
+         }
       default:
          {
             cerr << "!!!Unrecognized Command, try again" << endl;
