@@ -32,9 +32,9 @@ namespace net_oatsnet_class_datastructures {
       /* Pre-condition: None
        * Post-condition: Account is created if no errors exist, and NO_ERROR is returned
        * Params:
-       *    string        name     : the account the name is filed under
-       *    unsigned long checkings: the initial amount in the checkings account
-       *    unsigned long savings  : the initial amount in the savings account
+       *    name     : the account the name is filed under
+       *    checkings: the initial amount in the checkings account
+       *    savings  : the initial amount in the savings account
        * Returned error-conditions:
        *    TOO_MANY_ACCOUNTS: There is not enough room to add another account (exceeds
        *                                 MAX_ACCOUNTS)
@@ -80,12 +80,12 @@ namespace net_oatsnet_class_datastructures {
       /* Pre-condition:
        *    accountType is using AccountType enum, and does not deviate from it
        * Post-condition: 
-       *    Account is debited with the correct amount if no errors, and BankERror.NO_ERROR is returned
+       *    Account is debited with the correct amount if no errors, and Bank::NO_ERROR is returned
        *    If an error exists, nothing is to change
        * Params:
-       *    string        name       : the account the name is filed under
-       *    int           accountType: AccountType.CHECKINGS, AccountType.SAVINGS
-       *    unsigned long amount     : amount the account is to be credited
+       *    name       : the account the name is filed under
+       *    accountType: AccountType.CHECKINGS, AccountType.SAVINGS
+       *    amount     : amount the account is to be credited
        * Returned error-conditions:
        *    ACCOUNT_NOT_FOUND : Given name is not in list of accounts
        *    EMPTY_STRING      : cannot search for an empty name
