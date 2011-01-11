@@ -28,6 +28,10 @@ do
 done
 
 total=`expr $passed + $failed`
+echo ""
+echo "================================================================================"
+echo "Summary"
+echo "================================================================================"
 echo "$passed/$total test(s) passed"
 echo "$failed/$total test(s) failed"
 
