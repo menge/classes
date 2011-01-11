@@ -61,3 +61,23 @@ get_value_009.txt:
    get value of accounts in bank with all accounts at max value
 get_value_010.txt:
    get value of 50 accounts, and then delete one account, and check get value again
+deposit_001.txt:
+   create account, and deposit to checkings
+deposit_002.txt:
+   create account, and deposit to savings
+deposit_003.txt:
+   create multiple account, and deposit to checkings
+deposit_004.txt:
+   create multiple account, and deposit to savings
+deposit_005.txt:
+   attempt to deposit to non-existent account
+deposit_006.txt:
+   attempt to deposit to make it border MAXINT
+deposit_007.txt:
+   attempt to deposit to make it wrap to 0, and should see failure
+deposit_008.txt:
+   attempt to deposit to to make it wrap to >0, but <currAmount, and should see failure
+deposit_009.txt:
+   attempt to deposit 0 in checkings
+deposit_010.txt:
+   attempt to deposit 0 in savings

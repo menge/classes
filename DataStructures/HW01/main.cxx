@@ -1,5 +1,6 @@
 #include <cstdlib> // for EXIT_SUCCESS
 #include <iostream> // for cout
+#include "Account.h"
 #include "Bank.h"
 
 using namespace std;
@@ -101,6 +102,78 @@ int main(int argc, char **argv) {
                }
             }
 
+            break;
+         }
+      case 'e':
+      case 'E':
+         {
+            string name;
+            char checkingsOrSavings;
+            unsigned int amount;
+            int accountType;
+            bool okay = true;
+
+            cout << "Please enter name of account to deposit to: " << endl;
+            cin >> name;
+            cout << "Please enter the type of account [(c)heckings, (s)avings]: " << endl;
+            cin >> checkingsOrSavings;
+            cout << "Please enter the amount: " << endl;
+            cin >> amount;
+
+            switch (checkingsOrSavings) {
+            case 'c':
+            case 'C':
+               {
+                  accountType = Account::CHECKINGS;
+                  break;
+               }
+            case 's':
+            case 'S':
+               {
+                  accountType = Account::SAVINGS;
+                  break;
+               }
+            default:
+               {
+                  cerr << "Invalid entry for account type" << endl;
+                  okay = false;
+                  break;
+               }
+            }
+
+            if (okay) {
+               int result;
+
+               result = myBank.accountDeposit(name, accountType, amount);
+
+               switch (result) {
+               case Bank::ACCOUNT_NOT_FOUND:
+                  {
+                     cerr << "!!!Account by name [" << name << "] not found" << endl;
+                     break;
+                  }
+               case Bank::EMPTY_STRING:
+                  {
+                     cerr << "!!!Cannot enter account with no name information" << endl;
+                     break;
+                  }
+               case Bank::OVERFLOW:
+                  {
+                     cerr << "!!!Adding amount requested would result in overflow" << endl;
+                     break;
+                  }
+               case Bank::NO_ERROR:
+                  {
+                     /* everything is fine, nothing needed */
+                     break;
+                  }
+               default:
+                  {
+                     cerr << "!!!unrecognized return value" << endl;
+                     break;
+                  }
+               }
+            }
             break;
          }
       case 'g':

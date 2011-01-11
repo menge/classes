@@ -73,7 +73,7 @@ namespace net_oatsnet_class_datastructures {
        * Returned error-conditions:
        *    ACCOUNT_NOT_FOUND: Given name is not in list of accounts
        *    EMPTY_STRING     : cannot search for an empty name
-       *    OVERfLOW         : requested operation would result in an overflow
+       *    OVERFLOW         : requested operation would result in an overflow
        */
       int accountDeposit(string name, int accountType, unsigned long amount);
 

@@ -1,5 +1,6 @@
 #include "Bank.h"
 
+#include <assert.h>
 #include <stdio.h> // for printf
 
 namespace net_oatsnet_class_datastructures {
@@ -68,7 +69,41 @@ namespace net_oatsnet_class_datastructures {
    }
 
    int Bank::accountDeposit(string name, int accountType, unsigned long amount) {
-      return Bank::NO_ERROR;
+      /* if passed name is invalid (empty string), return EMPTY_STRING */
+      if (name == "") {
+         return Bank::EMPTY_STRING;
+      }
+
+      /* try to find */
+      for (int i = 0; i < Bank::MAX_ACCOUNTS; i++) {
+         if ( (accountValid[i] == true) && (name == accounts[i].getName()) ) {
+            unsigned int currAmount = 0;
+
+            /* found the account, now get the amount */
+            if (accountType == Account::CHECKINGS) {
+               currAmount = accounts[i].getCheckingsAmount();
+            }
+            else if (accountType == Account::SAVINGS) {
+               currAmount = accounts[i].getSavingsAmount();
+            }
+            else {
+               /* WE SHOULD NEVER GET HERE */
+               assert(false);
+            }
+
+            /* now check for overflow */
+            if (currAmount + amount < currAmount) {
+               return Bank::OVERFLOW;
+            }
+
+            /* no overflow, so go ahead and make deposit and return*/
+            accounts[i].deposit(accountType, amount);
+            return Bank::NO_ERROR;
+         }
+      }
+
+      /* didn't find the account */
+      return Bank::ACCOUNT_NOT_FOUND;
    }
 
    int Bank::accountWithdraw(string name, int accountType, unsigned long amount) {
