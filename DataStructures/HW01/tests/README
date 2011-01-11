@@ -41,3 +41,23 @@ del_account_012.txt:
    create 50 accounts, delete middle, add duplicate (after), then add unique in empty slot
 del_account_013.txt:
    create 50 accounts, delete middle, add duplicate (after), then add unique in empty slot, add another and expect add error
+get_value_001.txt:
+   get value of accounts in bank with no accounts (initial)
+get_value_002.txt:
+   get value of accounts in bank with one account
+get_value_003.txt:
+   get value of accounts in bank with five accounts
+get_value_004.txt:
+   get value of accounts in bank with fifty accounts
+get_value_005.txt:
+   get value of accounts in bank with one account right below 32-bit overflow
+get_value_006.txt:
+   get value of accounts in bank with one account right at 32-bit overflow
+get_value_007.txt:
+   get value of accounts in bank with one account above 32-bit overflow
+get_value_008.txt:
+   get value of accounts in bank with two accounts right below 32-bit overflow
+get_value_009.txt:
+   get value of accounts in bank with all accounts at max value
+get_value_010.txt:
+   get value of 50 accounts, and then delete one account, and check get value again

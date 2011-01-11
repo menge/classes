@@ -103,6 +103,12 @@ int main(int argc, char **argv) {
 
             break;
          }
+      case 'g':
+      case 'G':
+         {
+            cout << "Bank has a total of in all active accounts: " << myBank.getTotalAccountValues() << endl;
+            break;
+         }
       case 'p':
       case 'P':
          {

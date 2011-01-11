@@ -1,0 +1,4 @@
+Welcome to the Bank!!
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
+Bank has a total of in all active accounts: 0
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 

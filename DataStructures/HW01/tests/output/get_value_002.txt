@@ -1,0 +1,8 @@
+Welcome to the Bank!!
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
+Please enter name of account: 
+Please enter the initial amount of checkings: 
+Please enter the initial amount of savings: 
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
+Bank has a total of in all active accounts: 3
+Enter command ( [q]uit, [a]dd account, [d]elete account, [g]et total value, d[e]posit, [w]ithdraw, [p]rint debug): 
