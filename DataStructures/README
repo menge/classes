@@ -2,6 +2,11 @@ This file gives a quick explaination as to what homeworks are listed
 in this directory.
 
 ================================================================================
+HW01 - Number to string conversions (multiple bases)
+================================================================================
+A warm-up exercise to convert a number to a string based on various bases
+
+================================================================================
 HW02 - Banking
 ================================================================================
 Introduction to c++ classes where the student is requested to write a Banking class.
