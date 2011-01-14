@@ -7,7 +7,7 @@ all: ll
 ll: main.o LinkedList.o
 	$(CXX) $(CFLAGS) main.o LinkedList.o -o ll
 
-main.o: main.cxx
+main.o: main.cxx LinkedList.h
 	$(CXX) $(CFLAGS) -c main.cxx
 
 LinkedList.o: LinkedList.cxx LinkedList.h
