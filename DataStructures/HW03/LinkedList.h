@@ -29,6 +29,8 @@ namespace net_oatsnet_class_datastructures {
       int remove(int pos);
 
       int getNumElements();
+
+      void print();
    private:
       Node *head;
       Node *tail;
