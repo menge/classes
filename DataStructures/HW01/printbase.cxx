@@ -6,6 +6,12 @@ const int MAX_BASE = 36;
 char* integer2char(unsigned int number, unsigned int base) {
     char *ptr;
     ptr = (char *) malloc(1 * sizeof(char));
+
+    /* check to see if malloc failed or not */
+    if (ptr == 0) {
+       perror("malloc failed");
+    }
+
     ptr[0] = '\0';
     return ptr;
 }
