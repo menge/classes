@@ -16,15 +16,12 @@ char* integer2char(unsigned int number, unsigned int base) {
     }
 
     ptr = (char *) malloc((length + 1) * sizeof(char));
-<<<<<<< HEAD
 
     /* check to see if malloc failed or not */
     if (ptr == 0) {
        perror("malloc failed");
     }
 
-=======
->>>>>>> 78580605ca31eda42bfadf0c3203fcf0af153c03
     ptr[length-1] = '\0';
 
     for (int i = length-2; i >= 0; i--) {
