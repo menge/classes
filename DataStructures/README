@@ -10,3 +10,18 @@ A warm-up exercise to convert a number to a string based on various bases
 HW02 - Banking
 ================================================================================
 Introduction to c++ classes where the student is requested to write a Banking class.
+
+================================================================================
+HW03 - Linked List
+================================================================================
+Create a doubly linked list class.
+
+>>>TODO<<<
+Linked Lists
+Stacks
+Queues
+Trees
+Heaps
+Binary Search Trees
+Hashtables
+templates
