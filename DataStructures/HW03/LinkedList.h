@@ -12,7 +12,7 @@ namespace net_oatsnet_class_datastructures {
 
    class LinkedList {
    public:
-      /* no-argument constructor
+      /* Linked List constructor will create a linked list with no elements in it
        * Pre-condition: None
        * Post-condition: object's members variables are set to default values ("", 0s)
        */
@@ -24,16 +24,29 @@ namespace net_oatsnet_class_datastructures {
        */
       ~LinkedList();
 
+      // TODO operator overloading (copy constructor... equals?)
+
+      /* Insert an element into the linked list at directed position
+       * Pre-condition: None
+       * Post-condition: element added in position as directed
+       */
       void insert(int pos, int value);
 
       int remove(int pos);
 
       int getNumElements();
 
+      Node* begin();
+
+      Node* end();
+
+      Node* next();
+
       void print();
    private:
       Node *head;
       Node *tail;
+      Node *currPtr;
       int numElements;
    };
 }
