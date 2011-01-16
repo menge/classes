@@ -12,4 +12,27 @@ namespace net_oatsnet_class_datastructures {
 
    LinkedList::~LinkedList() {
    }
+
+   void LinkedList::insert(int pos, int value) {
+   }
+
+   int LinkedList::remove(int pos) {
+      return 0;
+   }
+
+   int LinkedList::getNumElements() {
+      retrun 0;
+   }
+
+   Node* LinkedList::begin() {
+      return NULL;
+   }
+
+   Node* LinkedList::end() {
+      return NULL;
+   }
+
+   Node* LinkedList::next() {
+      return NULL;
+   }
 }
