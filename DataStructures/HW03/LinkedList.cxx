@@ -21,7 +21,7 @@ namespace net_oatsnet_class_datastructures {
    }
 
    int LinkedList::getNumElements() {
-      retrun 0;
+      return 0;
    }
 
    Node* LinkedList::begin() {
