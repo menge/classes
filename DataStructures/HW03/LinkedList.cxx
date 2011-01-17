@@ -11,11 +11,9 @@ namespace net_oatsnet_class_datastructures {
    }
 
    LinkedList::~LinkedList() {
-#if 0
       while (!isEmpty()) {
          remove();
       }
-#endif
    }
 
    void LinkedList::insert(int value) {
@@ -107,6 +105,53 @@ namespace net_oatsnet_class_datastructures {
    }
 
    void LinkedList::remove() {
+      if (numElements == 0) {
+         /* nothing to delete, so we're outta here */
+         return;
+      }
+
+      /* deleting last element */
+      if (numElements == 1) {
+         delete cursor;
+
+         head = NULL;
+         tail = NULL;
+         cursor = NULL;
+         numElements = 0;
+         return;
+      }
+
+      /* there's at least 2 elemets left */
+      if (cursor == NULL) {
+         cursor = tail;
+      }
+
+      //Save cursor to be deleted later
+      Node *deleteme = cursor;
+
+      // reconfigure pointers and assign new cursor
+      if (cursor == head) {
+         head = cursor->next;
+         cursor->next->prev = NULL;
+
+         cursor = head;
+      }
+      else if (cursor == tail) {
+         tail = cursor->prev;
+         cursor->prev->next = NULL;
+
+         cursor = tail;
+      }
+      else {
+         cursor->prev->next = cursor->next;
+         cursor->next->prev = cursor->prev;
+
+         cursor = cursor->next;
+      }
+
+      /* now we can delete node and update count */
+      delete deleteme;
+      numElements -= 1;
    }
 
    bool LinkedList::isEmpty() {
