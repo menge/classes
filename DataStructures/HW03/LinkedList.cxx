@@ -17,12 +17,16 @@ namespace net_oatsnet_class_datastructures {
    }
 
    void LinkedList::insertHead(int value) {
+      setHead();
+      insert(value);
    }
 
    void LinkedList::append(int value) {
    }
 
    void LinkedList::appendTail(int value) {
+      setTail();
+      append(value);
    }
 
    void LinkedList::remove() {
