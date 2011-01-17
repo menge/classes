@@ -66,6 +66,7 @@ namespace net_oatsnet_class_datastructures {
 
       /* Removes the current cursor. Cursor then becomes the next in the list if not null, otherwise, becomes previous.
        * When removing the last element, cursor reverts to being NULL. If no elements left, and cursor is NULL, performs nothing.
+       * If cursor is NULL, remove tail.
        * Pre-condition: None
        * Post-condition: The Node pointed to by the cursor is removed. If the next Node pointed to by the removed cursor is not NULL,
        *                 then it becomes the new cursor. Otherwise, the previous Node becomes the new cursor, even if NULL (meaning
