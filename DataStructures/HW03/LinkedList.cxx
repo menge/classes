@@ -29,6 +29,9 @@ namespace net_oatsnet_class_datastructures {
    }
 
    bool LinkedList::isEmpty() {
+      if (numElements == 0) {
+         return true;
+      }
       return false;
    }
 
