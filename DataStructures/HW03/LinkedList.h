@@ -52,7 +52,7 @@ namespace net_oatsnet_class_datastructures {
    private:
       Node *head;
       Node *tail;
-      Node *currPtr;
+      Node *cursor;
       int numElements;
    };
 }

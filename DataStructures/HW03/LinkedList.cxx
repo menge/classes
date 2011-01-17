@@ -6,7 +6,7 @@ namespace net_oatsnet_class_datastructures {
    LinkedList::LinkedList() {
       head = NULL;
       tail = NULL;
-      currPtr = NULL;
+      cursor = NULL;
       numElements = 0;
    }
 
