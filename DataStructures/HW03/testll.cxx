@@ -185,23 +185,55 @@ TEST_F(LinkedListTest, TestGetNumElementsAfterRemoving) {
 // END   TESTS: getNumElements
 
 // BEGIN TESTS: setHead
+TEST_F(LinkedListTest, TestSetHead) {
+   int *val_p;
+
+   val_p = myll0.setHead();
+   EXPECT_TRUE(val_p == NULL);
+
+   val_p = myll1.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+
+   val_p = myll2.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+
+   val_p = myll3.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+
+   val_p = myll9.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+}
+// END   TESTS: setHead
+
 // BEGIN TESTS: setTail
+TEST_F(LinkedListTest, TestSetTail) {
+   int *val_p;
+
+   val_p = myll0.setTail();
+   EXPECT_TRUE(val_p == NULL);
+
+   val_p = myll1.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+
+   val_p = myll2.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 1);
+
+   val_p = myll3.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 2);
+
+   val_p = myll9.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 8);
+}
+// BEGIN TESTS: setTail
+
 // BEGIN TESTS: prev
 // BEGIN TESTS: next
 // BEGIN TESTS: print
-
-TEST_F(LinkedListTest, TestInsertIntoEmpty) {
-   //TODO
-}
-
-TEST_F(LinkedListTest, TestInsertBeforeHead) {
-   //TODO
-}
-
-TEST_F(LinkedListTest, TestInsertInMiddle) {
-   //TODO
-}
-
-TEST_F(LinkedListTest, TestInsertAfterTail) {
-   //TODO
-}
