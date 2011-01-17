@@ -48,13 +48,22 @@ class LinkedListTest : public testing::Test {
       LinkedList myll9;
 };
 
+// Initialization
 TEST_F(LinkedListTest, TestInitializesToEmpty) {
-   // TODO: review this... still correct?
    EXPECT_EQ(myll0.getNumElements(), 0);
    EXPECT_TRUE(myll0.setHead() == NULL);
    EXPECT_TRUE(myll0.setTail() == NULL);
+   EXPECT_TRUE(myll0.isEmpty());
 }
 
+// insert
+// insertHead
+// append
+// appendTail
+// remove
+// isEmpty
+// search
+// getNumElements
 TEST_F(LinkedListTest, TestGetNumElements) {
    EXPECT_EQ(myll0.getNumElements(), 0);
    EXPECT_EQ(myll1.getNumElements(), 1);
@@ -62,6 +71,56 @@ TEST_F(LinkedListTest, TestGetNumElements) {
    EXPECT_EQ(myll3.getNumElements(), 3);
    EXPECT_EQ(myll9.getNumElements(), 9);
 }
+
+TEST_F(LinkedListTest, TestGetNumElementsAfterInserting) {
+   EXPECT_EQ(myll0.getNumElements(), 0);
+   myll0.insert(-1);
+   EXPECT_EQ(myll0.getNumElements(), 1);
+
+   EXPECT_EQ(myll1.getNumElements(), 1);
+   myll1.insert(-1);
+   EXPECT_EQ(myll1.getNumElements(), 2);
+
+   EXPECT_EQ(myll2.getNumElements(), 2);
+   myll2.insert(-1);
+   EXPECT_EQ(myll2.getNumElements(), 3);
+
+   EXPECT_EQ(myll3.getNumElements(), 3);
+   myll3.insert(-1);
+   EXPECT_EQ(myll3.getNumElements(), 4);
+
+   EXPECT_EQ(myll9.getNumElements(), 9);
+   myll3.insert(-1);
+   EXPECT_EQ(myll3.getNumElements(), 10);
+}
+
+TEST_F(LinkedListTest, TestGetNumElementsAfterRemoving) {
+   EXPECT_EQ(myll0.getNumElements(), 0);
+   myll0.remove();
+   EXPECT_EQ(myll0.getNumElements(), 0);
+
+   EXPECT_EQ(myll1.getNumElements(), 1);
+   myll1.remove();
+   EXPECT_EQ(myll1.getNumElements(), 0);
+
+   EXPECT_EQ(myll2.getNumElements(), 2);
+   myll2.remove();
+   EXPECT_EQ(myll2.getNumElements(), 1);
+
+   EXPECT_EQ(myll3.getNumElements(), 3);
+   myll3.remove();
+   EXPECT_EQ(myll3.getNumElements(), 2);
+
+   EXPECT_EQ(myll9.getNumElements(), 9);
+   myll3.remove();
+   EXPECT_EQ(myll3.getNumElements(), 8);
+}
+
+// setHead
+// setTail
+// prev
+// next
+// print
 
 TEST_F(LinkedListTest, TestSearchExist) {
    verifySearchElement(&myll1, 0, true);
