@@ -29,8 +29,8 @@ class LinkedListTest : public testing::Test {
       virtual void TearDown() {
       }
 
-      void verifySearchElement(LinkedList *ll, int searchValue, bool expectedNull) {
-         if (expectedNull) {
+      void verifySearchElement(LinkedList *ll, int searchValue, bool expectToFind) {
+         if (!expectToFind) {
             EXPECT_TRUE(ll->search(searchValue) == NULL);
             return;
          }
@@ -191,8 +191,8 @@ TEST_F(LinkedListTest, TestGetNumElementsAfterInserting) {
    EXPECT_EQ(myll3.getNumElements(), 4);
 
    EXPECT_EQ(myll9.getNumElements(), 9);
-   myll3.insert(-1);
-   EXPECT_EQ(myll3.getNumElements(), 10);
+   myll9.insert(-1);
+   EXPECT_EQ(myll9.getNumElements(), 10);
 }
 
 TEST_F(LinkedListTest, TestGetNumElementsAfterRemoving) {
@@ -213,8 +213,8 @@ TEST_F(LinkedListTest, TestGetNumElementsAfterRemoving) {
    EXPECT_EQ(myll3.getNumElements(), 2);
 
    EXPECT_EQ(myll9.getNumElements(), 9);
-   myll3.remove();
-   EXPECT_EQ(myll3.getNumElements(), 8);
+   myll9.remove();
+   EXPECT_EQ(myll9.getNumElements(), 8);
 }
 // END   TESTS: getNumElements
 
