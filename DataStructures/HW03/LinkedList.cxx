@@ -63,6 +63,42 @@ namespace net_oatsnet_class_datastructures {
    }
 
    void LinkedList::append(int value) {
+      Node *p = new Node;
+      p->data = value;
+
+      /* if cursor is NULL, try to set it to tail */
+      if (cursor == NULL) {
+         cursor = tail;
+      }
+
+      /* if cursor is still NULL, then we have an empty list */
+      if (cursor == NULL) {
+         head = p;
+         tail = p;
+         p->next = NULL;
+         p->prev = NULL;
+      }
+      /* cursor exists... append after it */
+      else {
+         p->next = cursor->next;
+         p->prev = cursor;
+
+         /* check to see if p is the new tail */
+         if (p->next == NULL) {
+            tail = p;
+         }
+         else {
+            p->next->prev = p;
+         }
+
+         cursor->next = p;
+      }
+
+      /* p is our new cursor */
+      cursor = p;
+
+      /* we've added, so update count */
+      numElements += 1;
    }
 
    void LinkedList::appendTail(int value) {
