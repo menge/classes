@@ -41,11 +41,19 @@ namespace net_oatsnet_class_datastructures {
    }
 
    int* LinkedList::setHead() {
-      return NULL;
+      if (head == NULL) {
+         return NULL;
+      }
+      cursor = head;
+      return &(cursor->data);
    }
 
    int* LinkedList::setTail() {
-      return NULL;
+      if (tail == NULL) {
+         return NULL;
+      }
+      cursor = tail;
+      return &(cursor->data);
    }
 
    int* LinkedList::prev() {
