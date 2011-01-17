@@ -269,4 +269,34 @@ TEST_F(LinkedListTest, TestSetTail) {
 // END   TESTS: setTail
 
 // BEGIN TESTS: prev
+TEST_F(LinkedListTest, TestPrevFromTail) {
+   int *val_p;
+
+   val_p = myll9.setTail();
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 7);
+}
+
+TEST_F(LinkedListTest, TestPrevFromHead) {
+   int *val_p;
+
+   val_p = myll9.setHead();
+   val_p = myll9.prev();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestPrevFromNull) {
+   int *val_p;
+
+   val_p = myll9.setHead();
+   val_p = myll9.prev();
+   EXPECT_TRUE(val_p == NULL);
+
+   // going prev from NULL
+   val_p = myll9.prev();
+   EXPECT_TRUE(val_p == NULL);
+}
+// END   TESTS: prev
+
 // BEGIN TESTS: next
