@@ -6,40 +6,27 @@ using namespace net_oatsnet_class_datastructures;
 class LinkedListTest : public testing::Test {
    protected: 
       virtual void SetUp() {
-         myll1.insert(0, 0);
+         myll1.appendTail(0);
 
-         myll2.insert(0, 1);
-         myll2.insert(0, 0);
+         myll2.appendTail(0);
+         myll2.appendTail(1);
 
-         myll3.insert(0, 2);
-         myll3.insert(0, 1);
-         myll3.insert(0, 0);
+         myll3.appendTail(0);
+         myll3.appendTail(1);
+         myll3.appendTail(2);
 
-         myll3.insert(0, 8);
-         myll3.insert(0, 7);
-         myll3.insert(0, 6);
-         myll3.insert(0, 5);
-         myll3.insert(0, 4);
-         myll3.insert(0, 3);
-         myll3.insert(0, 2);
-         myll3.insert(0, 1);
-         myll3.insert(0, 0);
+         myll9.appendTail(0);
+         myll9.appendTail(1);
+         myll9.appendTail(2);
+         myll9.appendTail(3);
+         myll9.appendTail(4);
+         myll9.appendTail(5);
+         myll9.appendTail(6);
+         myll9.appendTail(7);
+         myll9.appendTail(8);
       }
 
       virtual void TearDown() {
-      }
-
-      void verifyElement(LinkedList *ll, int pos, int expectedValue, bool posExpectedNull) {
-         /* position given expected to be null */
-         if (posExpectedNull) {
-            EXPECT_TRUE(ll->getElement(pos) == NULL);
-            return;
-         }
-
-         /* position given expected to exist */
-         int *val_p = ll->getElement(pos);
-         ASSERT_TRUE(val_p != NULL);
-         EXPECT_EQ(*val_p, expectedValue);
       }
 
       void verifySearchElement(LinkedList *ll, int searchValue, bool expectedNull) {
@@ -62,9 +49,10 @@ class LinkedListTest : public testing::Test {
 };
 
 TEST_F(LinkedListTest, TestInitializesToEmpty) {
+   // TODO: review this... still correct?
    EXPECT_EQ(myll0.getNumElements(), 0);
-   EXPECT_TRUE(myll0.begin() == NULL);
-   EXPECT_TRUE(myll0.end() == NULL);
+   EXPECT_TRUE(myll0.setHead() == NULL);
+   EXPECT_TRUE(myll0.setTail() == NULL);
 }
 
 TEST_F(LinkedListTest, TestGetNumElements) {
@@ -73,33 +61,6 @@ TEST_F(LinkedListTest, TestGetNumElements) {
    EXPECT_EQ(myll2.getNumElements(), 2);
    EXPECT_EQ(myll3.getNumElements(), 3);
    EXPECT_EQ(myll9.getNumElements(), 9);
-}
-
-TEST_F(LinkedListTest, TestGetElement) {
-   verifyElement(&myll0, 0, 0, false);
-
-   verifyElement(&myll1, 0, 0, true);
-   verifyElement(&myll1, 1, 0, false);
-
-   verifyElement(&myll2, 0, 0, true);
-   verifyElement(&myll2, 1, 1, true);
-   verifyElement(&myll2, 2, 0, false);
-
-   verifyElement(&myll3, 0, 0, true);
-   verifyElement(&myll3, 1, 1, true);
-   verifyElement(&myll3, 2, 2, true);
-   verifyElement(&myll3, 3, 0, false);
-
-   verifyElement(&myll9, 0, 0, true);
-   verifyElement(&myll9, 1, 1, true);
-   verifyElement(&myll9, 2, 2, true);
-   verifyElement(&myll9, 3, 3, true);
-   verifyElement(&myll9, 4, 4, true);
-   verifyElement(&myll9, 5, 5, true);
-   verifyElement(&myll9, 6, 6, true);
-   verifyElement(&myll9, 7, 7, true);
-   verifyElement(&myll9, 8, 8, true);
-   verifyElement(&myll9, 9, 0, false);
 }
 
 TEST_F(LinkedListTest, TestSearchExist) {

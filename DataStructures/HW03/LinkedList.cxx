@@ -13,11 +13,23 @@ namespace net_oatsnet_class_datastructures {
    LinkedList::~LinkedList() {
    }
 
-   void LinkedList::insert(int pos, int value) {
+   void LinkedList::insert(int value) {
    }
 
-   int LinkedList::remove(int pos) {
-      return 0;
+   void LinkedList::insertHead(int value) {
+   }
+
+   void LinkedList::append(int value) {
+   }
+
+   void LinkedList::appendTail(int value) {
+   }
+
+   void LinkedList::remove() {
+   }
+
+   bool LinkedList::isEmpty() {
+      return false;
    }
 
    int* LinkedList::search(int pos) {
@@ -28,19 +40,22 @@ namespace net_oatsnet_class_datastructures {
       return 0;
    }
 
-   int* LinkedList::getElement(int pos) {
+   int* LinkedList::setHead() {
       return NULL;
    }
 
-   Node* LinkedList::begin() {
+   int* LinkedList::setTail() {
       return NULL;
    }
 
-   Node* LinkedList::end() {
+   int* LinkedList::prev() {
       return NULL;
    }
 
-   Node* LinkedList::next() {
+   int* LinkedList::next() {
       return NULL;
+   }
+
+   void LinkedList::print() {
    }
 }
