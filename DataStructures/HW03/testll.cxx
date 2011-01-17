@@ -62,7 +62,41 @@ TEST_F(LinkedListTest, TestInitializesToEmpty) {
 // BEGIN TESTS: append
 // BEGIN TESTS: appendTail
 // BEGIN TESTS: remove
+
 // BEGIN TESTS: isEmpty
+TEST_F(LinkedListTest, TestIsEmpty) {
+   EXPECT_TRUE(myll0.isEmpty());
+   EXPECT_FALSE(myll1.isEmpty());
+   EXPECT_FALSE(myll2.isEmpty());
+   EXPECT_FALSE(myll3.isEmpty());
+   EXPECT_FALSE(myll9.isEmpty());
+}
+
+TEST_F(LinkedListTest, TestIsEmptyAfterInsertingInEmpty) {
+   EXPECT_TRUE(myll0.isEmpty());
+   myll0.insert(-1);
+   EXPECT_FALSE(myll0.isEmpty());
+}
+
+TEST_F(LinkedListTest, TestIsEmptyAfterRemovingAllElements) {
+   EXPECT_FALSE(myll1.isEmpty());
+   myll1.remove();
+   EXPECT_TRUE(myll1.isEmpty());
+
+   EXPECT_FALSE(myll9.isEmpty());
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   EXPECT_TRUE(myll9.isEmpty());
+}
+// END   TESTS: isEmpty
+
 // BEGIN TESTS: search
 TEST_F(LinkedListTest, TestSearchExist) {
    verifySearchElement(&myll1, 0, true);
