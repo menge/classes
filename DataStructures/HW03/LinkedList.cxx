@@ -44,6 +44,7 @@ namespace net_oatsnet_class_datastructures {
       if (head == NULL) {
          return NULL;
       }
+
       cursor = head;
       return &(cursor->data);
    }
@@ -52,16 +53,27 @@ namespace net_oatsnet_class_datastructures {
       if (tail == NULL) {
          return NULL;
       }
+
       cursor = tail;
       return &(cursor->data);
    }
 
    int* LinkedList::prev() {
-      return NULL;
+      if (cursor == NULL) {
+         return NULL;
+      }
+
+      cursor = cursor->prev;
+      return &(cursor->data);
    }
 
    int* LinkedList::next() {
-      return NULL;
+      if (cursor == NULL) {
+         return NULL;
+      }
+
+      cursor = cursor->next;
+      return &(cursor->data);
    }
 
    void LinkedList::print() {
