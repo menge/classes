@@ -300,3 +300,32 @@ TEST_F(LinkedListTest, TestPrevFromNull) {
 // END   TESTS: prev
 
 // BEGIN TESTS: next
+TEST_F(LinkedListTest, TestNextFromHead) {
+   int *val_p;
+
+   val_p = myll9.setHead();
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 1);
+}
+
+TEST_F(LinkedListTest, TestNextFromTail) {
+   int *val_p;
+
+   val_p = myll9.setTail();
+   val_p = myll9.next();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestNextFromNull) {
+   int *val_p;
+
+   val_p = myll9.setTail();
+   val_p = myll9.next();
+   EXPECT_TRUE(val_p == NULL);
+
+   // going next from NULL
+   val_p = myll9.next();
+   EXPECT_TRUE(val_p == NULL);
+}
+// END   TESTS: next
