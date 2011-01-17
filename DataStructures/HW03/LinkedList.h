@@ -27,6 +27,7 @@ namespace net_oatsnet_class_datastructures {
       // TODO operator overloading (copy constructor... equals?)
 
       /* Insert an element into the linked list before the current cursor postition. Inserted element becomes the new cursor.
+       * If cursor is NULL, item is inserted before head.
        * Pre-condition: None
        * Post-condition: element added in front of cursor
        *                 cursor becomes the added element
@@ -45,6 +46,7 @@ namespace net_oatsnet_class_datastructures {
       void insertHead(int value);
 
       /* Append an element into the linked list after the current cursor postition. Appended element becomes the new cursor.
+       * If cursor is NULL, item is appended after tail.
        * Pre-condition: None
        * Post-condition: element added behind (next) the cursor
        *                 cursor becomes the added element
