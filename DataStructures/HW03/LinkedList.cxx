@@ -20,6 +20,10 @@ namespace net_oatsnet_class_datastructures {
       return 0;
    }
 
+   int* LinkedList::search(int pos) {
+      return NULL;
+   }
+
    int LinkedList::getNumElements() {
       return 0;
    }

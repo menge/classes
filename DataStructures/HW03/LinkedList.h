@@ -34,6 +34,8 @@ namespace net_oatsnet_class_datastructures {
 
       int remove(int pos);
 
+      int* search(int value);
+
       int* getElement(int pos);
 
       int getNumElements();

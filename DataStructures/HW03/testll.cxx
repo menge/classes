@@ -42,6 +42,17 @@ class LinkedListTest : public testing::Test {
          EXPECT_EQ(*val_p, expectedValue);
       }
 
+      void verifySearchElement(LinkedList *ll, int searchValue, bool expectedNull) {
+         if (expectedNull) {
+            EXPECT_TRUE(ll->search(searchValue) == NULL);
+            return;
+         }
+
+         int *val_p = ll->search(searchValue);
+         ASSERT_TRUE(val_p != NULL);
+         EXPECT_EQ(*val_p, searchValue);
+      }
+
       // Declares the variables your tests want to use.
       LinkedList myll0;
       LinkedList myll1;
@@ -89,6 +100,35 @@ TEST_F(LinkedListTest, TestGetElement) {
    verifyElement(&myll9, 7, 7, true);
    verifyElement(&myll9, 8, 8, true);
    verifyElement(&myll9, 9, 0, false);
+}
+
+TEST_F(LinkedListTest, TestSearchExist) {
+   verifySearchElement(&myll1, 0, true);
+
+   verifySearchElement(&myll2, 0, true);
+   verifySearchElement(&myll2, 1, true);
+
+   verifySearchElement(&myll3, 0, true);
+   verifySearchElement(&myll3, 1, true);
+   verifySearchElement(&myll3, 2, true);
+
+   verifySearchElement(&myll9, 0, true);
+   verifySearchElement(&myll9, 1, true);
+   verifySearchElement(&myll9, 2, true);
+   verifySearchElement(&myll9, 3, true);
+   verifySearchElement(&myll9, 4, true);
+   verifySearchElement(&myll9, 5, true);
+   verifySearchElement(&myll9, 6, true);
+   verifySearchElement(&myll9, 7, true);
+   verifySearchElement(&myll9, 8, true);
+}
+
+TEST_F(LinkedListTest, TestSearchNotExist) {
+   verifySearchElement(&myll0, -1, false);
+   verifySearchElement(&myll1, -1, false);
+   verifySearchElement(&myll2, -1, false);
+   verifySearchElement(&myll3, -1, false);
+   verifySearchElement(&myll9, -1, false);
 }
 
 TEST_F(LinkedListTest, TestInsertIntoEmpty) {
