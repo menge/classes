@@ -24,6 +24,10 @@ namespace net_oatsnet_class_datastructures {
       return 0;
    }
 
+   int* LinkedList::getElement(int pos) {
+      return NULL;
+   }
+
    Node* LinkedList::begin() {
       return NULL;
    }

@@ -34,11 +34,15 @@ namespace net_oatsnet_class_datastructures {
 
       int remove(int pos);
 
+      int* getElement(int pos);
+
       int getNumElements();
 
       Node* begin();
 
       Node* end();
+
+      Node* last();
 
       Node* next();
 
