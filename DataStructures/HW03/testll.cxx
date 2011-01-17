@@ -48,22 +48,89 @@ class LinkedListTest : public testing::Test {
       LinkedList myll9;
 };
 
-// Initialization
+// BEGIN TESTS: Initialization
 TEST_F(LinkedListTest, TestInitializesToEmpty) {
    EXPECT_EQ(myll0.getNumElements(), 0);
    EXPECT_TRUE(myll0.setHead() == NULL);
    EXPECT_TRUE(myll0.setTail() == NULL);
    EXPECT_TRUE(myll0.isEmpty());
 }
+// END   TESTS: Initialization
 
-// insert
-// insertHead
-// append
-// appendTail
-// remove
-// isEmpty
-// search
-// getNumElements
+// BEGIN TESTS: insert
+// BEGIN TESTS: insertHead
+// BEGIN TESTS: append
+// BEGIN TESTS: appendTail
+// BEGIN TESTS: remove
+// BEGIN TESTS: isEmpty
+// BEGIN TESTS: search
+TEST_F(LinkedListTest, TestSearchExist) {
+   verifySearchElement(&myll1, 0, true);
+
+   verifySearchElement(&myll2, 0, true);
+   verifySearchElement(&myll2, 1, true);
+
+   verifySearchElement(&myll3, 0, true);
+   verifySearchElement(&myll3, 1, true);
+   verifySearchElement(&myll3, 2, true);
+
+   verifySearchElement(&myll9, 0, true);
+   verifySearchElement(&myll9, 1, true);
+   verifySearchElement(&myll9, 2, true);
+   verifySearchElement(&myll9, 3, true);
+   verifySearchElement(&myll9, 4, true);
+   verifySearchElement(&myll9, 5, true);
+   verifySearchElement(&myll9, 6, true);
+   verifySearchElement(&myll9, 7, true);
+   verifySearchElement(&myll9, 8, true);
+}
+
+TEST_F(LinkedListTest, TestSearchNotExist) {
+   verifySearchElement(&myll0, -1, false);
+   verifySearchElement(&myll1, -1, false);
+   verifySearchElement(&myll2, -1, false);
+   verifySearchElement(&myll3, -1, false);
+   verifySearchElement(&myll9, -1, false);
+}
+
+TEST_F(LinkedListTest, TestSearchCursorUpdate) {
+   int *val_p;
+
+   verifySearchElement(&myll9, 5, true); // cursor should point to 5 now
+
+   val_p = myll9.next(); // going next should point to 6
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 6);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 5);
+
+   verifySearchElement(&myll9, 7, true); // cursor should point to 7 now
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 6);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 5);
+}
+
+TEST_F(LinkedListTest, TestSearchCursorNotUpdated) {
+   int *val_p;
+
+   verifySearchElement(&myll9, 5, true); // cursor should point to 5 now
+
+   verifySearchElement(&myll9, -1, false); // should not update cursor
+
+   val_p = myll9.next(); // going next should point to 6
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 6);
+}
+// END   TESTS: search
+
+// BEGIN TESTS: getNumElements
 TEST_F(LinkedListTest, TestGetNumElements) {
    EXPECT_EQ(myll0.getNumElements(), 0);
    EXPECT_EQ(myll1.getNumElements(), 1);
@@ -115,49 +182,13 @@ TEST_F(LinkedListTest, TestGetNumElementsAfterRemoving) {
    myll3.remove();
    EXPECT_EQ(myll3.getNumElements(), 8);
 }
+// END   TESTS: getNumElements
 
-// setHead
-// setTail
-// prev
-// next
-// print
-
-TEST_F(LinkedListTest, TestSearchExist) {
-   verifySearchElement(&myll1, 0, true);
-
-   verifySearchElement(&myll2, 0, true);
-   verifySearchElement(&myll2, 1, true);
-
-   verifySearchElement(&myll3, 0, true);
-   verifySearchElement(&myll3, 1, true);
-   verifySearchElement(&myll3, 2, true);
-
-   verifySearchElement(&myll9, 0, true);
-   verifySearchElement(&myll9, 1, true);
-   verifySearchElement(&myll9, 2, true);
-   verifySearchElement(&myll9, 3, true);
-   verifySearchElement(&myll9, 4, true);
-   verifySearchElement(&myll9, 5, true);
-   verifySearchElement(&myll9, 6, true);
-   verifySearchElement(&myll9, 7, true);
-   verifySearchElement(&myll9, 8, true);
-}
-
-TEST_F(LinkedListTest, TestSearchNotExist) {
-   verifySearchElement(&myll0, -1, false);
-   verifySearchElement(&myll1, -1, false);
-   verifySearchElement(&myll2, -1, false);
-   verifySearchElement(&myll3, -1, false);
-   verifySearchElement(&myll9, -1, false);
-}
-
-TEST_F(LinkedListTest, TestSearchCursorUpdate) {
-   //TODO
-}
-
-TEST_F(LinkedListTest, TestSearchCursorNotUpdated) {
-   //TODO
-}
+// BEGIN TESTS: setHead
+// BEGIN TESTS: setTail
+// BEGIN TESTS: prev
+// BEGIN TESTS: next
+// BEGIN TESTS: print
 
 TEST_F(LinkedListTest, TestInsertIntoEmpty) {
    //TODO
