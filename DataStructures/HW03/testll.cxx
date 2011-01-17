@@ -232,8 +232,7 @@ TEST_F(LinkedListTest, TestSetTail) {
    ASSERT_TRUE(val_p != NULL);
    EXPECT_EQ(*val_p, 8);
 }
-// BEGIN TESTS: setTail
+// END   TESTS: setTail
 
 // BEGIN TESTS: prev
 // BEGIN TESTS: next
-// BEGIN TESTS: print
