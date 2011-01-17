@@ -131,6 +131,14 @@ TEST_F(LinkedListTest, TestSearchNotExist) {
    verifySearchElement(&myll9, -1, false);
 }
 
+TEST_F(LinkedListTest, TestSearchCursorUpdate) {
+   //TODO
+}
+
+TEST_F(LinkedListTest, TestSearchCursorNotUpdated) {
+   //TODO
+}
+
 TEST_F(LinkedListTest, TestInsertIntoEmpty) {
    //TODO
 }
