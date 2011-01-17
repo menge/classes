@@ -11,6 +11,9 @@ namespace net_oatsnet_class_datastructures {
    }
 
    LinkedList::~LinkedList() {
+      while (!isEmpty()) {
+         remove();
+      }
    }
 
    void LinkedList::insert(int value) {
