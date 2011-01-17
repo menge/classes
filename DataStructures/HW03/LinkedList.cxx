@@ -40,7 +40,7 @@ namespace net_oatsnet_class_datastructures {
    }
 
    int LinkedList::getNumElements() {
-      return 0;
+      return numElements;
    }
 
    int* LinkedList::setHead() {
