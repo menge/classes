@@ -161,7 +161,14 @@ namespace net_oatsnet_class_datastructures {
       return false;
    }
 
-   int* LinkedList::search(int pos) {
+   int* LinkedList::search(int value) {
+      for (Node *p = head; p != NULL; p = p->next) {
+         if (p->data == value) {
+            /* we've found a match */
+            cursor = p;
+            return &(cursor->data);
+         }
+      }
       return NULL;
    }
 
