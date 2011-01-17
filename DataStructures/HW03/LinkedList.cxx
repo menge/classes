@@ -11,12 +11,50 @@ namespace net_oatsnet_class_datastructures {
    }
 
    LinkedList::~LinkedList() {
+#if 0
       while (!isEmpty()) {
          remove();
       }
+#endif
    }
 
    void LinkedList::insert(int value) {
+      Node *p = new Node;
+      p->data = value;
+
+      /* if cursor is NULL, try to set it to head */
+      if (cursor == NULL) {
+         cursor = head;
+      }
+
+      /* if cursor is still NULL, then we have an empty list */
+      if (cursor == NULL) {
+         head = p;
+         tail = p;
+         p->next = NULL;
+         p->prev = NULL;
+      }
+      /* cursor exists... insert in front of it */
+      else {
+         p->next = cursor;
+         p->prev = cursor->prev;
+         
+         /* is p is the new head */
+         if (p->prev == NULL) {
+            head = p;
+         }
+         else {
+            p->prev->next = p;
+         }
+
+         cursor->prev = p;
+      }
+
+      /* p is our new cursor */
+      cursor = p;
+
+      /* we've added, so update count */
+      numElements += 1;
    }
 
    void LinkedList::insertHead(int value) {

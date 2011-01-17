@@ -1,6 +1,6 @@
 C=gcc
 CXX=g++
-CFLAGS=-g -Wall
+CFLAGS=-g -Wall -Werror
 
 TESTINC=-I../../frameworks/gtest/include
 TESTLIBDIR=-L../../frameworks/gtest/lib
