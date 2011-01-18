@@ -144,9 +144,9 @@ TEST_F(LinkedListTest, TestInsertWithNullCursor) {
    ASSERT_TRUE(val_p != NULL);
    EXPECT_EQ(*val_p, 0);
 
-   val_p = myll9.next();
+   val_p = myll9.prev();
    ASSERT_TRUE(val_p != NULL);
-   EXPECT_EQ(*val_p, 1);
+   EXPECT_EQ(*val_p, -100);
 
    EXPECT_EQ(myll9.getNumElements(), 10);
 }
@@ -287,6 +287,104 @@ TEST_F(LinkedListTest, TestInsertHeadCursorIsNull) {
 // END   TESTS: insertHead
 
 // BEGIN TESTS: append
+TEST_F(LinkedListTest, TestAppendInEmptyList) {
+   int *val_p;
+
+   myll0.append(-1);
+
+   EXPECT_EQ(myll0.getNumElements(), 1);
+
+   val_p = myll0.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   val_p = myll0.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   EXPECT_FALSE(myll0.isEmpty());
+}
+
+TEST_F(LinkedListTest, TestAppendAfterHead) {
+   int *val_p;
+
+   myll9.setHead();
+   myll9.append(-1);
+
+   val_p = myll9.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+
+TEST_F(LinkedListTest, TestAppendAfterTail) {
+   int *val_p;
+
+   myll9.setTail();
+   myll9.append(-1);
+
+   val_p = myll9.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 8);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+
+TEST_F(LinkedListTest, TestAppendInMiddle) {
+   int *val_p;
+
+   myll9.search(5);
+   myll9.append(-1);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 5);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 6);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+
+TEST_F(LinkedListTest, TestAppendWithNullCursor) {
+   int *val_p;
+   myll9.setTail();
+   val_p = myll9.next();
+
+   EXPECT_TRUE(val_p == NULL);
+
+   myll9.append(-100);
+   
+   val_p = myll9.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -100);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 8);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -100);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+// END   TESTS: append
+
 // BEGIN TESTS: appendTail
 // BEGIN TESTS: remove
 
