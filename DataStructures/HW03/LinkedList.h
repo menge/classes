@@ -24,8 +24,6 @@ namespace net_oatsnet_class_datastructures {
        */
       ~LinkedList();
 
-      // TODO operator overloading (copy constructor... equals?)
-
       /* Insert an element into the linked list before the current cursor postition. Inserted element becomes the new cursor.
        * If cursor is NULL, item is inserted before head.
        * Pre-condition: None

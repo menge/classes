@@ -1,3 +1,5 @@
+#include <malloc.h>
+#include <stdlib.h>
 #include <gtest/gtest.h>
 #include "LinkedList.h"
 
@@ -969,4 +971,29 @@ TEST_F(LinkedListTest, TestGetCursorDataWhenCursorIsNull) {
 }
 // END   TESTS: getCursorData
 
-//TODO destructor, and freeing of memory
+// BEGIN TESTS: destructor
+TEST_F(LinkedListTest, TestDestructorFreesMemory) {
+   struct mallinfo miBefore, miDuring, miAfter;
+
+   miBefore = mallinfo();
+   {
+      LinkedList a;
+
+      a.appendTail(0);
+      a.appendTail(1);
+      a.appendTail(2);
+      a.appendTail(3);
+      a.appendTail(4);
+      a.appendTail(5);
+      a.appendTail(6);
+
+      miDuring = mallinfo();
+   }
+   miAfter = mallinfo();
+
+   // Ensures that memory is actually being tracked
+   EXPECT_TRUE(miDuring.uordblks > miBefore.uordblks);
+   // Ensures that memory is freed appropriately
+   EXPECT_EQ(miBefore.uordblks, miAfter.uordblks);
+}
+// END   TESTS: destructor
