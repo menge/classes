@@ -929,4 +929,44 @@ TEST_F(LinkedListTest, TestNextFromNull) {
 }
 // END   TESTS: next
 
+// BEGIN TESTS: getCursorData
+TEST_F(LinkedListTest, TestGetCursorDataFromHead) {
+   int *val_p;
+
+   val_p = myll9.setHead();
+   val_p = myll9.getCursorData();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+}
+
+TEST_F(LinkedListTest, TestGetCursorDataFromTail) {
+   int *val_p;
+
+   val_p = myll9.setTail();
+   val_p = myll9.getCursorData();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 8);
+}
+
+TEST_F(LinkedListTest, TestGetCursorDataFromMiddle) {
+   int *val_p;
+
+   val_p = myll9.search(5);
+   val_p = myll9.getCursorData();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 5);
+}
+
+TEST_F(LinkedListTest, TestGetCursorDataWhenCursorIsNull) {
+   int *val_p;
+
+   val_p = myll9.setTail();
+   val_p = myll9.next();
+   EXPECT_TRUE(val_p == NULL);
+
+   val_p = myll9.getCursorData();
+   EXPECT_TRUE(val_p == NULL);
+}
+// END   TESTS: getCursorData
+
 //TODO destructor, and freeing of memory

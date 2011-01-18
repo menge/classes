@@ -116,16 +116,23 @@ namespace net_oatsnet_class_datastructures {
       /* Sets the cursor to what is previous to it, and returns a pointer to the value stored in the new cursor
        * Pre-condition: None
        * Post-condition: only cursor should be changed
-       * Returns: a pointer to the new cursor (note: this can be NULL when list is empty or going prev from HEAD)
+       * Returns: a pointer to the data the new cursor points to (note: this can be NULL when list is empty or going prev from HEAD)
        */
       int* prev();
 
       /* Sets the cursor to what is next to it, and returns a pointer to the value stored in the new cursor
        * Pre-condition: None
        * Post-condition: only cursor should be changed
-       * Returns: a pointer to the new cursor (note: this can be NULL when list is empty or going next from TAIL)
+       * Returns: a pointer to the data the new cursor points to (note: this can be NULL when list is empty or going next from TAIL)
        */
       int* next();
+
+      /* Returns pointer to data of item that cursor points to. If cursor is not valid, will return NULL.
+       * Pre-condition: None
+       * Post-condition: no private variables will be modified
+       * Returns: a pointer to the data that the cursor points to (note: this can be NULL when list is empty or when cursor is already NULL)
+       */
+      int* getCursorData();
 
       /* prints out diagnostic information about list
        * Pre-condition: None

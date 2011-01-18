@@ -212,6 +212,14 @@ namespace net_oatsnet_class_datastructures {
       return &(cursor->data);
    }
 
+   int* LinkedList::getCursorData() {
+      if (cursor == NULL) {
+         return NULL;
+      }
+
+      return &(cursor->data);
+   }
+
    void LinkedList::print() {
    }
 }
