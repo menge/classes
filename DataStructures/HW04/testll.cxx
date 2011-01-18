@@ -1,5 +1,6 @@
 #include <malloc.h>
 #include <stdlib.h>
+#include <string>
 #include <gtest/gtest.h>
 #include "LinkedList.h"
 
@@ -29,6 +30,16 @@ class LinkedListTest : public testing::Test {
       }
 
       virtual void TearDown() {
+      }
+
+      template <class T>
+      void walkVerify(LinkedList<T> *ll, T* toVerify, int verifySize) {
+         ll->setHead();
+         for (int i = 0; i < verifySize; i++, ll->next()) {
+            T* val_p = ll->getCursorData();
+            ASSERT_TRUE(val_p != NULL);
+            EXPECT_TRUE(*val_p == toVerify[i]);
+         }
       }
 
       template <class T>
@@ -998,3 +1009,31 @@ TEST_F(LinkedListTest, TestDestructorFreesMemory) {
    EXPECT_EQ(miBefore.uordblks, miAfter.uordblks);
 }
 // END   TESTS: destructor
+
+// BEGIN TESTS: templates work
+TEST_F(LinkedListTest, TestTemplatesWork) {
+   int intVals[] = {0, 1, 2};
+   double doubleVals[] = {0.0, 0.1, 0.2};
+   string stringVals[] = {"0", "1", "2"};
+
+   LinkedList<int> a;
+   LinkedList<double> b;
+   LinkedList<string> c;
+
+   a.appendTail(intVals[0]);
+   a.appendTail(intVals[1]);
+   a.appendTail(intVals[2]);
+
+   b.appendTail(doubleVals[0]);
+   b.appendTail(doubleVals[1]);
+   b.appendTail(doubleVals[2]);
+
+   c.appendTail(stringVals[0]);
+   c.appendTail(stringVals[1]);
+   c.appendTail(stringVals[2]);
+
+   walkVerify(&a, intVals, 3);
+   walkVerify(&b, doubleVals, 3);
+   walkVerify(&c, stringVals, 3);
+}
+// END TESTS: templates work
