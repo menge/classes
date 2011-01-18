@@ -14,10 +14,26 @@ int main(int argc, char **argv) {
    while (!done) {
       char command;
 
-      cout << "Enter command ([q]uit): " << endl;
+      cout << "Enter command ([q]uit, [p]rint, [i]nsert): " << endl;
       cin >> command;
 
       switch (command) {
+      case 'i':
+         {
+            int num;
+
+            cout << "Enter number to insert" << endl;
+            cin >> num;
+
+            myll.insert(num);
+            break;
+         }
+      case 'p':
+      case 'P':
+         {
+            myll.print();
+            break;
+         }
       case 'q':
       case 'Q':
          {
