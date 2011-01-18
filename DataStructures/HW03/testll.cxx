@@ -520,6 +520,146 @@ TEST_F(LinkedListTest, TestAppendTailCursorIsNull) {
 // END   TESTS: appendTail
 
 // BEGIN TESTS: remove
+TEST_F(LinkedListTest, TestRemoveFromHead) {
+   int *val_p;
+
+   myll9.setHead();
+   myll9.remove();
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 2);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 1);
+
+   val_p = myll9.prev();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestRemoveFromTail) {
+   int *val_p;
+
+   myll9.setTail();
+   myll9.remove();
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 6);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 7);
+
+   val_p = myll9.next();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestRemoveFromMiddle) {
+   int *val_p;
+
+   myll9.search(5);
+   myll9.remove();
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 4);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 6);
+}
+
+TEST_F(LinkedListTest, TestRemoveWithNullCursor) {
+   int *val_p;
+
+   myll9.setTail();
+   val_p = myll9.next();
+   EXPECT_TRUE(val_p == NULL);
+
+   myll9.remove();
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 6);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 7);
+
+   val_p = myll9.next();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestRemoveLast) {
+   int *val_p;
+
+   myll1.remove();
+
+   val_p = myll1.setHead();
+   EXPECT_TRUE(val_p == NULL);
+
+   val_p = myll1.setTail();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestRemoveAll) {
+   int *val_p;
+
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+   myll9.remove();
+
+   val_p = myll9.setHead();
+   EXPECT_TRUE(val_p == NULL);
+
+   val_p = myll9.setTail();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestRemoveWhenEmpty) {
+   int *val_p;
+
+   EXPECT_EQ(myll0.getNumElements(), 0);
+
+   myll0.remove();
+
+   val_p = myll0.setHead();
+   EXPECT_TRUE(val_p == NULL);
+
+   val_p = myll0.setTail();
+   EXPECT_TRUE(val_p == NULL);
+}
+
+TEST_F(LinkedListTest, TestRemoveThenInsert) {
+   int *val_p;
+
+   myll3.search(1);
+   myll3.remove();
+   myll3.insert(-1);
+
+   val_p = myll3.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+
+   val_p = myll3.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   val_p = myll3.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 2);
+
+   val_p = myll3.next();
+   EXPECT_TRUE(val_p == NULL);
+}
 // END   TESTS: remove
 
 // BEGIN TESTS: isEmpty
