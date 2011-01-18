@@ -1,4 +1,3 @@
-#include <math.h> // for log
 #include <stdio.h> // for printf
 #include <stdlib.h> // for malloc, EXIT_SUCCESS
 
@@ -6,37 +5,14 @@ const int MAX_BASE = 36;
 
 char* integer2char(unsigned int number, unsigned int base) {
     char *ptr;
-    int length;
-
-    if (number == 0) {
-        length = 1;
-    }
-    else {
-        length = floor(log(number)/log(base)) + 1 + 1;
-    }
-
-    ptr = (char *) malloc((length + 1) * sizeof(char));
+    ptr = (char *) malloc(1 * sizeof(char));
 
     /* check to see if malloc failed or not */
     if (ptr == 0) {
        perror("malloc failed");
     }
 
-    ptr[length-1] = '\0';
-
-    for (int i = length-2; i >= 0; i--) {
-        int tmpAns;
-        tmpAns = number % base;
-        number = number / base;
-
-        if (tmpAns < 10) {
-            ptr[i] = tmpAns + '0';
-        }
-        else {
-            ptr[i] = tmpAns - 10 + 'a';
-        }
-    }
-
+    ptr[0] = '\0';
     return ptr;
 }
 
