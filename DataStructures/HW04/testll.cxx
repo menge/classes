@@ -31,7 +31,8 @@ class LinkedListTest : public testing::Test {
       virtual void TearDown() {
       }
 
-      void verifySearchElement(LinkedList *ll, int searchValue, bool expectToFind) {
+      template <class T>
+      void verifySearchElement(LinkedList<T> *ll, T searchValue, bool expectToFind) {
          if (!expectToFind) {
             EXPECT_TRUE(ll->search(searchValue) == NULL);
             return;
@@ -43,11 +44,11 @@ class LinkedListTest : public testing::Test {
       }
 
       // Declares the variables your tests want to use.
-      LinkedList myll0;
-      LinkedList myll1;
-      LinkedList myll2;
-      LinkedList myll3;
-      LinkedList myll9;
+      LinkedList<int> myll0;
+      LinkedList<int> myll1;
+      LinkedList<int> myll2;
+      LinkedList<int> myll3;
+      LinkedList<int> myll9;
 };
 
 // BEGIN TESTS: Initialization
@@ -977,7 +978,7 @@ TEST_F(LinkedListTest, TestDestructorFreesMemory) {
 
    miBefore = mallinfo();
    {
-      LinkedList a;
+      LinkedList<int> a;
 
       a.appendTail(0);
       a.appendTail(1);

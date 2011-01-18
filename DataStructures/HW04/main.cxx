@@ -6,7 +6,7 @@ using namespace std;
 using namespace net_oatsnet_class_datastructures;
 
 int main(int argc, char **argv) {
-   LinkedList myll = LinkedList();
+   LinkedList<int> myll = LinkedList<int>();
    bool done = false;
 
    cout << "Welcome to the Linked List!!" << endl;
