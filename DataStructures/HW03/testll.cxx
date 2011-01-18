@@ -58,6 +58,100 @@ TEST_F(LinkedListTest, TestInitializesToEmpty) {
 // END   TESTS: Initialization
 
 // BEGIN TESTS: insert
+TEST_F(LinkedListTest, TestInsertInEmptyList) {
+   int *val_p;
+
+   myll0.insert(-1);
+
+   EXPECT_EQ(myll0.getNumElements(), 1);
+
+   val_p = myll0.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   val_p = myll0.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   EXPECT_FALSE(myll0.isEmpty());
+}
+
+TEST_F(LinkedListTest, TestInsertInFrontOfHead) {
+   int *val_p;
+
+   myll9.setHead();
+   myll9.insert(-1);
+
+   val_p = myll9.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+
+TEST_F(LinkedListTest, TestInsertInFrontOfTail) {
+   int *val_p;
+
+   myll9.setTail();
+   myll9.insert(-1);
+
+   val_p = myll9.setTail();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 8);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+
+TEST_F(LinkedListTest, TestInsertInMiddle) {
+   int *val_p;
+
+   myll9.search(5);
+   myll9.insert(-1);
+
+   val_p = myll9.prev();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 4);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -1);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 5);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+
+TEST_F(LinkedListTest, TestInsertWithNullCursor) {
+   int *val_p;
+   myll9.setTail();
+   val_p = myll9.next();
+
+   EXPECT_TRUE(val_p == NULL);
+
+   myll9.insert(-100);
+   
+   val_p = myll9.setHead();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, -100);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 0);
+
+   val_p = myll9.next();
+   ASSERT_TRUE(val_p != NULL);
+   EXPECT_EQ(*val_p, 1);
+
+   EXPECT_EQ(myll9.getNumElements(), 10);
+}
+// END   TESTS: insert
+
 // BEGIN TESTS: insertHead
 // BEGIN TESTS: append
 // BEGIN TESTS: appendTail
@@ -329,3 +423,5 @@ TEST_F(LinkedListTest, TestNextFromNull) {
    EXPECT_TRUE(val_p == NULL);
 }
 // END   TESTS: next
+
+//TODO destructor, and freeing of memory
