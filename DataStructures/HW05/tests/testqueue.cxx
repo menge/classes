@@ -112,3 +112,57 @@ TEST_F(QueueTest, DestructorFreesMemory) {
    EXPECT_EQ(miBefore.uordblks, miAfter.uordblks);
 }
 // END   TESTS: Destructor
+
+// BEGIN TESTS: enqueue
+TEST_F(QueueTest, EnqueueNormal) {
+   int aq0[] = {100};
+   int aq1[] = {0, 100};
+   int aq2[] = {0, 1, 100};
+   int aq3[] = {0, 1, 2, 100};
+   int aq9[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 100};
+
+   q0.enqueue(100);
+   q1.enqueue(100);
+   q2.enqueue(100);
+   q3.enqueue(100);
+   q9.enqueue(100);
+
+   checkWalk(&q0, aq0, 1);
+   checkWalk(&q1, aq1, 2);
+   checkWalk(&q2, aq2, 3);
+   checkWalk(&q3, aq3, 4);
+   checkWalk(&q9, aq9, 10);
+}
+
+TEST_F(QueueTest, EnqueueEmpty) {
+   int aq0[] = {0};
+
+   EXPECT_EQ(q0.getNumElements(), 0);
+   EXPECT_TRUE(q0.isEmpty());
+   checkWalk(&q0, (int*) NULL, 0);
+
+   q0.enqueue(0);
+
+   EXPECT_EQ(q0.getNumElements(), 1);
+   EXPECT_FALSE(q0.isEmpty());
+   checkWalk(&q0, aq0, 1);
+}
+
+TEST_F(QueueTest, EnqueueMultiple) {
+   int aq0[] = {0, 1, -1, 2, -2};
+
+   EXPECT_EQ(q0.getNumElements(), 0);
+   EXPECT_TRUE(q0.isEmpty());
+   checkWalk(&q0, (int*) NULL, 0);
+
+   q0.enqueue(0);
+   q0.enqueue(1);
+   q0.enqueue(-1);
+   q0.enqueue(2);
+   q0.enqueue(-2);
+
+   EXPECT_EQ(q0.getNumElements(), 5);
+   EXPECT_FALSE(q0.isEmpty());
+   checkWalk(&q0, aq0, 5);
+}
+// END   TESTS: enqueue
