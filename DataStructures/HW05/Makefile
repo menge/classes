@@ -6,13 +6,16 @@ TESTINC=-I../../frameworks/gtest/include -I.
 TESTLIBDIR=-L../../frameworks/gtest/lib
 TESTLIBS=-lgtest_main -lgtest -lpthread
 
-all: ll testll
+all: ll testall
 
-test: testll
-	./testll
+test: testall
+	./testall
 
-testll: testll.o
-	$(CXX) $(CFLAGS) -static testll.o $(TESTLIBDIR) $(TESTLIBS) -o testll
+testall: testll.o testqueue.o
+	$(CXX) $(CFLAGS) -static testll.o testqueue.o $(TESTLIBDIR) $(TESTLIBS) -o testall
+
+testqueue.o: tests/testqueue.cxx LinkedList.h Queue.h
+	$(CXX) $(CFLAGS) $(TESTINC) -c tests/testqueue.cxx
 
 testll.o: tests/testll.cxx LinkedList.h
 	$(CXX) $(CFLAGS) $(TESTINC) -c tests/testll.cxx
@@ -24,4 +27,4 @@ main.o: main.cxx LinkedList.h
 	$(CXX) $(CFLAGS) -c main.cxx
 
 clean:
-	rm -f *.o ll testll
+	rm -f *.o ll testall
