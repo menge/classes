@@ -47,13 +47,18 @@ namespace net_oatsnet_class_datastructures {
        *                 head and tail pointers are updated appropriately
        *                 numElements is updated appropriately
        */
-      T* dequeue(T value) {
-         T *retval_ptr;
+      T dequeue() {
+         T retval;
 
-         retval_ptr = ll.setHead();
+         if (isEmpty()) {
+            // TODO: make a real exception?
+            throw string("Cannot dequeue from empty list");
+         }
+
+         retval = *(ll.setHead());
          ll.remove();
 
-         return retval_ptr;
+         return retval;
       }
 
       /* Returns true if no elements exist in LinkedList, false otherwise

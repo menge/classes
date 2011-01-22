@@ -166,3 +166,105 @@ TEST_F(QueueTest, EnqueueMultiple) {
    checkWalk(&q0, aq0, 5);
 }
 // END   TESTS: enqueue
+
+// BEGIN TESTS: dequeue
+TEST_F(QueueTest, DequeueNormal) {
+   int aq1[] = {};
+   int aq2[] = {1};
+   int aq3[] = {1, 2};
+   int aq9[] = {1, 2, 3, 4, 5, 6, 7, 8};
+
+   EXPECT_EQ(q1.dequeue(), 0);
+   EXPECT_EQ(q2.dequeue(), 0);
+   EXPECT_EQ(q3.dequeue(), 0);
+   EXPECT_EQ(q9.dequeue(), 0);
+
+   checkWalk(&q0, (int *) NULL, 0);
+   checkWalk(&q1, aq1, 0);
+   checkWalk(&q2, aq2, 1);
+   checkWalk(&q3, aq3, 2);
+   checkWalk(&q9, aq9, 8);
+}
+
+TEST_F(QueueTest, DequeueAll) {
+   int aq1[] = {};
+   int aq2[] = {};
+   int aq3[] = {};
+   int aq9[] = {};
+
+   EXPECT_EQ(q1.dequeue(), 0);
+   EXPECT_EQ(q2.dequeue(), 0);
+   EXPECT_EQ(q3.dequeue(), 0);
+   EXPECT_EQ(q9.dequeue(), 0);
+
+   EXPECT_EQ(q2.dequeue(), 1);
+   EXPECT_EQ(q3.dequeue(), 1);
+   EXPECT_EQ(q9.dequeue(), 1);
+
+   EXPECT_EQ(q3.dequeue(), 2);
+   EXPECT_EQ(q9.dequeue(), 2);
+
+   EXPECT_EQ(q9.dequeue(), 3);
+   EXPECT_EQ(q9.dequeue(), 4);
+   EXPECT_EQ(q9.dequeue(), 5);
+   EXPECT_EQ(q9.dequeue(), 6);
+   EXPECT_EQ(q9.dequeue(), 7);
+   EXPECT_EQ(q9.dequeue(), 8);
+
+   checkWalk(&q0, (int *) NULL, 0);
+   checkWalk(&q1, aq1, 0);
+   checkWalk(&q2, aq2, 0);
+   checkWalk(&q3, aq3, 0);
+   checkWalk(&q9, aq9, 0);
+}
+
+TEST_F(QueueTest, DequeueWhenEmpty) {
+   try {
+      q0.dequeue();
+   }
+   catch (string error) {
+      EXPECT_TRUE(error == string("Cannot dequeue from empty list"));
+   }
+}
+
+TEST_F(QueueTest, DequeueFromFullToBeyondEmpty) {
+   EXPECT_EQ(q9.dequeue(), 0);
+   EXPECT_EQ(q9.dequeue(), 1);
+   EXPECT_EQ(q9.dequeue(), 2);
+   EXPECT_EQ(q9.dequeue(), 3);
+   EXPECT_EQ(q9.dequeue(), 4);
+   EXPECT_EQ(q9.dequeue(), 5);
+   EXPECT_EQ(q9.dequeue(), 6);
+   EXPECT_EQ(q9.dequeue(), 7);
+   EXPECT_EQ(q9.dequeue(), 8);
+   try {
+      q9.dequeue();
+   }
+   catch (string error) {
+      EXPECT_TRUE(error == string("Cannot dequeue from empty list"));
+   }
+}
+
+TEST_F(QueueTest, DequeueThenEnqueue) {
+   int aq9[] = {3, 4, 5, 6, 7, 8, 9, 10, 11};
+   int aq99[] = {6, 7, 8, 9, 10, 11, 12, 13, 14};
+
+   EXPECT_EQ(q9.dequeue(), 0);
+   q9.enqueue(9);
+   EXPECT_EQ(q9.dequeue(), 1);
+   q9.enqueue(10);
+   EXPECT_EQ(q9.dequeue(), 2);
+   q9.enqueue(11);
+
+   checkWalk(&q9, aq9, 9);
+
+   EXPECT_EQ(q9.dequeue(), 3);
+   EXPECT_EQ(q9.dequeue(), 4);
+   EXPECT_EQ(q9.dequeue(), 5);
+   q9.enqueue(12);
+   q9.enqueue(13);
+   q9.enqueue(14);
+
+   checkWalk(&q9, aq99, 9);
+}
+// END   TESTS: dequeue

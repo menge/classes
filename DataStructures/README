@@ -21,10 +21,13 @@ HW04 - Linked List with templates
 ================================================================================
 Take work from HW03 and templatize them
 
+================================================================================
+HW05 - Queues and Stacks using LikedList implementation + exceptions
+================================================================================
+Create a Queue and Stack implementation using previous Linked Lists.
+Also introduce use of exceptions
+
 >>>TODO<<<
-Linked Lists
-Stacks
-Queues
 Trees
 Heaps
 Binary Search Trees
