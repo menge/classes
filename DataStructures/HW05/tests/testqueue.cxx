@@ -268,3 +268,37 @@ TEST_F(QueueTest, DequeueThenEnqueue) {
    checkWalk(&q9, aq99, 9);
 }
 // END   TESTS: dequeue
+
+// BEGIN TESTS: isEmpty
+TEST_F(QueueTest, IsEmptyNormal) {
+   EXPECT_TRUE(q0.isEmpty());
+   EXPECT_FALSE(q1.isEmpty());
+   EXPECT_FALSE(q2.isEmpty());
+   EXPECT_FALSE(q3.isEmpty());
+   EXPECT_FALSE(q9.isEmpty());
+}
+
+TEST_F(QueueTest, IsNotEmptyAfterEnqueueingIntoEmptyQueue) {
+   EXPECT_TRUE(q0.isEmpty());
+   q0.enqueue(0);
+   EXPECT_FALSE(q0.isEmpty());
+}
+
+TEST_F(QueueTest, IsNotEmptyAfterEnqueueingIntoNonEmptyQueue) {
+   EXPECT_FALSE(q1.isEmpty());
+   q1.enqueue(0);
+   EXPECT_FALSE(q1.isEmpty());
+}
+
+TEST_F(QueueTest, IsNotEmptyAfterDequeueingAndQueueNotEmpty) {
+   EXPECT_FALSE(q2.isEmpty());
+   q2.dequeue();
+   EXPECT_FALSE(q2.isEmpty());
+}
+
+TEST_F(QueueTest, IsEmptyAfterDequeueingAndQueueIsEmpty) {
+   EXPECT_FALSE(q1.isEmpty());
+   q1.dequeue();
+   EXPECT_TRUE(q1.isEmpty());
+}
+// END   TESTS: isEmpty
