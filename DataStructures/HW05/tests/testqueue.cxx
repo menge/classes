@@ -302,3 +302,80 @@ TEST_F(QueueTest, IsEmptyAfterDequeueingAndQueueIsEmpty) {
    EXPECT_TRUE(q1.isEmpty());
 }
 // END   TESTS: isEmpty
+
+// BEGIN TESTS: toArray
+TEST_F(QueueTest, EmptyQueueToArray) {
+   EXPECT_TRUE(q0.toArray() == NULL);
+}
+
+TEST_F(QueueTest, SingleElementQueueToArray) {
+   int *myArray;
+   myArray = q1.toArray();
+   EXPECT_FALSE(myArray == NULL);
+   EXPECT_TRUE(myArray[0] == 0);
+
+   free(myArray);
+}
+
+TEST_F(QueueTest, MultipleElementQueueToArray) {
+   int *myArray;
+   myArray = q9.toArray();
+   EXPECT_FALSE(myArray == NULL);
+   EXPECT_TRUE(myArray[0] == 0);
+   EXPECT_TRUE(myArray[1] == 1);
+   EXPECT_TRUE(myArray[2] == 2);
+   EXPECT_TRUE(myArray[3] == 3);
+   EXPECT_TRUE(myArray[4] == 4);
+   EXPECT_TRUE(myArray[5] == 5);
+   EXPECT_TRUE(myArray[6] == 6);
+   EXPECT_TRUE(myArray[7] == 7);
+   EXPECT_TRUE(myArray[8] == 8);
+
+   free(myArray);
+}
+
+TEST_F(QueueTest, ArrayWalkingAfterRemovalAndInsertion) {
+   int *myArray;
+   myArray = q9.toArray();
+   EXPECT_FALSE(myArray == NULL);
+   EXPECT_TRUE(myArray[0] == 0);
+   EXPECT_TRUE(myArray[1] == 1);
+   EXPECT_TRUE(myArray[2] == 2);
+   EXPECT_TRUE(myArray[3] == 3);
+   EXPECT_TRUE(myArray[4] == 4);
+   EXPECT_TRUE(myArray[5] == 5);
+   EXPECT_TRUE(myArray[6] == 6);
+   EXPECT_TRUE(myArray[7] == 7);
+   EXPECT_TRUE(myArray[8] == 8);
+   free(myArray);
+
+   q9.dequeue();
+
+   myArray = q9.toArray();
+   EXPECT_FALSE(myArray == NULL);
+   EXPECT_TRUE(myArray[0] == 1);
+   EXPECT_TRUE(myArray[1] == 2);
+   EXPECT_TRUE(myArray[2] == 3);
+   EXPECT_TRUE(myArray[3] == 4);
+   EXPECT_TRUE(myArray[4] == 5);
+   EXPECT_TRUE(myArray[5] == 6);
+   EXPECT_TRUE(myArray[6] == 7);
+   EXPECT_TRUE(myArray[7] == 8);
+   free(myArray);
+
+   q9.enqueue(9);
+
+   myArray = q9.toArray();
+   EXPECT_FALSE(myArray == NULL);
+   EXPECT_TRUE(myArray[0] == 1);
+   EXPECT_TRUE(myArray[1] == 2);
+   EXPECT_TRUE(myArray[2] == 3);
+   EXPECT_TRUE(myArray[3] == 4);
+   EXPECT_TRUE(myArray[4] == 5);
+   EXPECT_TRUE(myArray[5] == 6);
+   EXPECT_TRUE(myArray[6] == 7);
+   EXPECT_TRUE(myArray[7] == 8);
+   EXPECT_TRUE(myArray[8] == 9);
+   free(myArray);
+}
+// END   TESTS: toArray
