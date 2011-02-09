@@ -379,3 +379,38 @@ TEST_F(QueueTest, ArrayWalkingAfterRemovalAndInsertion) {
    free(myArray);
 }
 // END   TESTS: toArray
+
+// BEGIN TESTS: getNumElements
+TEST_F(QueueTest, GetNumElementsDefault) {
+   EXPECT_EQ(q0.getNumElements(), 0);
+   EXPECT_EQ(q1.getNumElements(), 1);
+   EXPECT_EQ(q2.getNumElements(), 2);
+   EXPECT_EQ(q3.getNumElements(), 3);
+   EXPECT_EQ(q9.getNumElements(), 9);
+}
+
+TEST_F(QueueTest, GetNumElementsAddEmpty) {
+   EXPECT_EQ(q0.getNumElements(), 0);
+   q0.enqueue(0);
+   EXPECT_EQ(q0.getNumElements(), 1);
+}
+
+TEST_F(QueueTest, GetNumElementsAddEmptyRemoveToMakeEmpty) {
+   EXPECT_EQ(q0.getNumElements(), 0);
+   q0.enqueue(0);
+   EXPECT_EQ(q0.getNumElements(), 1);
+   q0.dequeue();
+   EXPECT_EQ(q0.getNumElements(), 0);
+}
+
+TEST_F(QueueTest, GetNumElementsRemoveBeyondEmpty) {
+   EXPECT_EQ(q0.getNumElements(), 0);
+   try {
+      q0.dequeue();
+   }
+   catch (string error) {
+      EXPECT_TRUE(error == string("Cannot dequeue from empty list"));
+   }
+   EXPECT_EQ(q0.getNumElements(), 0);
+}
+// END   TESTS: getNumElements
