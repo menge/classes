@@ -27,25 +27,19 @@ namespace net_oatsnet_class_datastructures {
       ~Queue() {
       }
 
-      /* Insert an element into the linked list before the current cursor postition. Inserted element becomes the new cursor.
-       * If cursor is NULL, item is inserted before head.
+      /* Enqueues an element into the queue (at the tail)
        * Pre-condition: None
-       * Post-condition: element added in front of cursor
-       *                 cursor becomes the added element
-       *                 head and tail pointers are updated appropriately
-       *                 numElements is updated appropriately
+       * Post-condition: None
        */
       void enqueue(T value) {
          ll.appendTail(value);
       }
 
-      /* Append an element into the linked list after the current cursor postition. Appended element becomes the new cursor.
-       * If cursor is NULL, item is appended after tail.
-       * Pre-condition: None
-       * Post-condition: element added behind (next) the cursor
-       *                 cursor becomes the added element
-       *                 head and tail pointers are updated appropriately
-       *                 numElements is updated appropriately
+      /* Element is dequeued and returned from head of queue.
+       * Pre-condition: There must be at least one element in list before attempting to dequeue. 
+                        If this condition is not met, an exception is to be thrown
+                        (currently string("Cannot dequeue from empty list"))
+       * Post-condition: element is dequeued and returned
        */
       T dequeue() {
          T retval;
@@ -61,16 +55,25 @@ namespace net_oatsnet_class_datastructures {
          return retval;
       }
 
-      /* Returns true if no elements exist in LinkedList, false otherwise
+      /* Returns true if no elements exist in Queue, false if otherwise
        * Pre-condition: None
-       * Post-condition: No private member variables are modified
-       * Returns: true  - LinkedList is empty
-                  false - LinkedList is not empty
+       * Post-condition: None
+       * Returns: true  - Queue is empty
+                  false - Queue is not empty
        */
       bool isEmpty() {
          return ll.isEmpty();
       }
 
+
+      /* Returns a pointer to an allocated array which contains the elements in the Queue
+       * with the head starting at index 0, and the last element (tail) at the last index.
+       * If Queue is empty returns null pointer.
+       * Pre-condition: None
+       * Post-condition: Queue is untouched, responsibility of caller to deallocate memory with free
+       * Returns: Null if there are no elements in Queue
+       *          pointer to array T is returned
+       */
       T* toArray() {
          T *newArray;
 
@@ -93,10 +96,10 @@ namespace net_oatsnet_class_datastructures {
          return newArray;
       }
 
-      /* Returns the number of elements in the list
+      /* Returns the number of elements in the queue
        * Pre-condition: None
-       * Post-condition: no private variables will be modified
-       * Returns: number of elements in list
+       * Post-condition: Queue is not modified
+       * Returns: number of elements in queue
        */
       int getNumElements() {
          return ll.getNumElements();
