@@ -11,8 +11,11 @@ all: ll testall
 test: testall
 	./testall
 
-testall: testll.o testqueue.o
-	$(CXX) $(CFLAGS) -static testll.o testqueue.o $(TESTLIBDIR) $(TESTLIBS) -o testall
+testall: testll.o testqueue.o teststack.o
+	$(CXX) $(CFLAGS) -static testll.o testqueue.o teststack.o $(TESTLIBDIR) $(TESTLIBS) -o testall
+
+teststack.o: tests/teststack.cxx LinkedList.h Stack.h
+	$(CXX) $(CFLAGS) $(TESTINC) -c tests/teststack.cxx
 
 testqueue.o: tests/testqueue.cxx LinkedList.h Queue.h
 	$(CXX) $(CFLAGS) $(TESTINC) -c tests/testqueue.cxx
