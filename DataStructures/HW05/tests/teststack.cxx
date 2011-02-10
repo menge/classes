@@ -114,7 +114,7 @@ TEST_F(StackTest, DestructorFreesMemory) {
 // END   TESTS: Destructor
 
 // BEGIN TESTS: push
-TEST_F(StackTest, EnqueueNormal) {
+TEST_F(StackTest, PushNormal) {
    int aq0[] = {100};
    int aq1[] = {100, 0};
    int aq2[] = {100, 1, 0};
@@ -134,7 +134,7 @@ TEST_F(StackTest, EnqueueNormal) {
    checkWalk(&q9, aq9, 10);
 }
 
-TEST_F(StackTest, EnqueueEmpty) {
+TEST_F(StackTest, PushEmpty) {
    int aq0[] = {0};
 
    EXPECT_EQ(q0.getNumElements(), 0);
@@ -148,8 +148,8 @@ TEST_F(StackTest, EnqueueEmpty) {
    checkWalk(&q0, aq0, 1);
 }
 
-TEST_F(StackTest, EnqueueMultiple) {
-   int aq0[] = {0, 1, -1, 2, -2};
+TEST_F(StackTest, PushMultiple) {
+   int aq0[] = {-2, 2, -1, 1, 0};
 
    EXPECT_EQ(q0.getNumElements(), 0);
    EXPECT_TRUE(q0.isEmpty());
@@ -168,16 +168,16 @@ TEST_F(StackTest, EnqueueMultiple) {
 // END   TESTS: push
 
 // BEGIN TESTS: pop
-TEST_F(StackTest, DequeueNormal) {
+TEST_F(StackTest, PopNormal) {
    int aq1[] = {};
-   int aq2[] = {1};
-   int aq3[] = {1, 2};
-   int aq9[] = {1, 2, 3, 4, 5, 6, 7, 8};
+   int aq2[] = {0};
+   int aq3[] = {1, 0};
+   int aq9[] = {7, 6, 5, 4, 3, 2, 1, 0};
 
    EXPECT_EQ(q1.pop(), 0);
-   EXPECT_EQ(q2.pop(), 0);
-   EXPECT_EQ(q3.pop(), 0);
-   EXPECT_EQ(q9.pop(), 0);
+   EXPECT_EQ(q2.pop(), 1);
+   EXPECT_EQ(q3.pop(), 2);
+   EXPECT_EQ(q9.pop(), 8);
 
    checkWalk(&q0, (int *) NULL, 0);
    checkWalk(&q1, aq1, 0);
@@ -186,30 +186,30 @@ TEST_F(StackTest, DequeueNormal) {
    checkWalk(&q9, aq9, 8);
 }
 
-TEST_F(StackTest, DequeueAll) {
+TEST_F(StackTest, PopAll) {
    int aq1[] = {};
    int aq2[] = {};
    int aq3[] = {};
    int aq9[] = {};
 
    EXPECT_EQ(q1.pop(), 0);
-   EXPECT_EQ(q2.pop(), 0);
-   EXPECT_EQ(q3.pop(), 0);
-   EXPECT_EQ(q9.pop(), 0);
-
    EXPECT_EQ(q2.pop(), 1);
-   EXPECT_EQ(q3.pop(), 1);
-   EXPECT_EQ(q9.pop(), 1);
-
    EXPECT_EQ(q3.pop(), 2);
-   EXPECT_EQ(q9.pop(), 2);
-
-   EXPECT_EQ(q9.pop(), 3);
-   EXPECT_EQ(q9.pop(), 4);
-   EXPECT_EQ(q9.pop(), 5);
-   EXPECT_EQ(q9.pop(), 6);
-   EXPECT_EQ(q9.pop(), 7);
    EXPECT_EQ(q9.pop(), 8);
+
+   EXPECT_EQ(q2.pop(), 0);
+   EXPECT_EQ(q3.pop(), 1);
+   EXPECT_EQ(q9.pop(), 7);
+
+   EXPECT_EQ(q3.pop(), 0);
+   EXPECT_EQ(q9.pop(), 6);
+
+   EXPECT_EQ(q9.pop(), 5);
+   EXPECT_EQ(q9.pop(), 4);
+   EXPECT_EQ(q9.pop(), 3);
+   EXPECT_EQ(q9.pop(), 2);
+   EXPECT_EQ(q9.pop(), 1);
+   EXPECT_EQ(q9.pop(), 0);
 
    checkWalk(&q0, (int *) NULL, 0);
    checkWalk(&q1, aq1, 0);
@@ -218,49 +218,49 @@ TEST_F(StackTest, DequeueAll) {
    checkWalk(&q9, aq9, 0);
 }
 
-TEST_F(StackTest, DequeueWhenEmpty) {
+TEST_F(StackTest, PopWhenEmpty) {
    try {
       q0.pop();
    }
    catch (string error) {
-      EXPECT_TRUE(error == string("Cannot pop from empty list"));
+      EXPECT_TRUE(error == string("Cannot remove from empty list"));
    }
 }
 
-TEST_F(StackTest, DequeueFromFullToBeyondEmpty) {
-   EXPECT_EQ(q9.pop(), 0);
-   EXPECT_EQ(q9.pop(), 1);
-   EXPECT_EQ(q9.pop(), 2);
-   EXPECT_EQ(q9.pop(), 3);
-   EXPECT_EQ(q9.pop(), 4);
-   EXPECT_EQ(q9.pop(), 5);
-   EXPECT_EQ(q9.pop(), 6);
-   EXPECT_EQ(q9.pop(), 7);
+TEST_F(StackTest, PopFromFullToBeyondEmpty) {
    EXPECT_EQ(q9.pop(), 8);
+   EXPECT_EQ(q9.pop(), 7);
+   EXPECT_EQ(q9.pop(), 6);
+   EXPECT_EQ(q9.pop(), 5);
+   EXPECT_EQ(q9.pop(), 4);
+   EXPECT_EQ(q9.pop(), 3);
+   EXPECT_EQ(q9.pop(), 2);
+   EXPECT_EQ(q9.pop(), 1);
+   EXPECT_EQ(q9.pop(), 0);
    try {
       q9.pop();
    }
    catch (string error) {
-      EXPECT_TRUE(error == string("Cannot pop from empty list"));
+      EXPECT_TRUE(error == string("Cannot remove from empty list"));
    }
 }
 
-TEST_F(StackTest, DequeueThenEnqueue) {
-   int aq9[] = {3, 4, 5, 6, 7, 8, 9, 10, 11};
-   int aq99[] = {6, 7, 8, 9, 10, 11, 12, 13, 14};
+TEST_F(StackTest, PopThenPush) {
+   int aq9[] = {11, 7, 6, 5, 4, 3, 2, 1, 0};
+   int aq99[] = {14, 13, 12, 5, 4, 3, 2, 1, 0};
 
-   EXPECT_EQ(q9.pop(), 0);
+   EXPECT_EQ(q9.pop(), 8);
    q9.push(9);
-   EXPECT_EQ(q9.pop(), 1);
+   EXPECT_EQ(q9.pop(), 9);
    q9.push(10);
-   EXPECT_EQ(q9.pop(), 2);
+   EXPECT_EQ(q9.pop(), 10);
    q9.push(11);
 
    checkWalk(&q9, aq9, 9);
 
-   EXPECT_EQ(q9.pop(), 3);
-   EXPECT_EQ(q9.pop(), 4);
-   EXPECT_EQ(q9.pop(), 5);
+   EXPECT_EQ(q9.pop(), 11);
+   EXPECT_EQ(q9.pop(), 7);
+   EXPECT_EQ(q9.pop(), 6);
    q9.push(12);
    q9.push(13);
    q9.push(14);
@@ -278,25 +278,25 @@ TEST_F(StackTest, IsEmptyNormal) {
    EXPECT_FALSE(q9.isEmpty());
 }
 
-TEST_F(StackTest, IsNotEmptyAfterEnqueueingIntoEmptyQueue) {
+TEST_F(StackTest, IsNotEmptyAfterPushingIntoEmptyQueue) {
    EXPECT_TRUE(q0.isEmpty());
    q0.push(0);
    EXPECT_FALSE(q0.isEmpty());
 }
 
-TEST_F(StackTest, IsNotEmptyAfterEnqueueingIntoNonEmptyQueue) {
+TEST_F(StackTest, IsNotEmptyAfterPushingIntoNonEmptyQueue) {
    EXPECT_FALSE(q1.isEmpty());
    q1.push(0);
    EXPECT_FALSE(q1.isEmpty());
 }
 
-TEST_F(StackTest, IsNotEmptyAfterDequeueingAndQueueNotEmpty) {
+TEST_F(StackTest, IsNotEmptyAfterPoppingAndQueueNotEmpty) {
    EXPECT_FALSE(q2.isEmpty());
    q2.pop();
    EXPECT_FALSE(q2.isEmpty());
 }
 
-TEST_F(StackTest, IsEmptyAfterDequeueingAndQueueIsEmpty) {
+TEST_F(StackTest, IsEmptyAfterPoppingAndQueueIsEmpty) {
    EXPECT_FALSE(q1.isEmpty());
    q1.pop();
    EXPECT_TRUE(q1.isEmpty());
@@ -321,15 +321,15 @@ TEST_F(StackTest, MultipleElementQueueToArray) {
    int *myArray;
    myArray = q9.toArray();
    EXPECT_FALSE(myArray == NULL);
-   EXPECT_TRUE(myArray[0] == 0);
-   EXPECT_TRUE(myArray[1] == 1);
-   EXPECT_TRUE(myArray[2] == 2);
-   EXPECT_TRUE(myArray[3] == 3);
+   EXPECT_TRUE(myArray[0] == 8);
+   EXPECT_TRUE(myArray[1] == 7);
+   EXPECT_TRUE(myArray[2] == 6);
+   EXPECT_TRUE(myArray[3] == 5);
    EXPECT_TRUE(myArray[4] == 4);
-   EXPECT_TRUE(myArray[5] == 5);
-   EXPECT_TRUE(myArray[6] == 6);
-   EXPECT_TRUE(myArray[7] == 7);
-   EXPECT_TRUE(myArray[8] == 8);
+   EXPECT_TRUE(myArray[5] == 3);
+   EXPECT_TRUE(myArray[6] == 2);
+   EXPECT_TRUE(myArray[7] == 1);
+   EXPECT_TRUE(myArray[8] == 0);
 
    free(myArray);
 }
@@ -338,44 +338,44 @@ TEST_F(StackTest, ArrayWalkingAfterRemovalAndInsertion) {
    int *myArray;
    myArray = q9.toArray();
    EXPECT_FALSE(myArray == NULL);
-   EXPECT_TRUE(myArray[0] == 0);
-   EXPECT_TRUE(myArray[1] == 1);
-   EXPECT_TRUE(myArray[2] == 2);
-   EXPECT_TRUE(myArray[3] == 3);
+   EXPECT_TRUE(myArray[0] == 8);
+   EXPECT_TRUE(myArray[1] == 7);
+   EXPECT_TRUE(myArray[2] == 6);
+   EXPECT_TRUE(myArray[3] == 5);
    EXPECT_TRUE(myArray[4] == 4);
-   EXPECT_TRUE(myArray[5] == 5);
-   EXPECT_TRUE(myArray[6] == 6);
-   EXPECT_TRUE(myArray[7] == 7);
-   EXPECT_TRUE(myArray[8] == 8);
+   EXPECT_TRUE(myArray[5] == 3);
+   EXPECT_TRUE(myArray[6] == 2);
+   EXPECT_TRUE(myArray[7] == 1);
+   EXPECT_TRUE(myArray[8] == 0);
    free(myArray);
 
    q9.pop();
 
    myArray = q9.toArray();
    EXPECT_FALSE(myArray == NULL);
-   EXPECT_TRUE(myArray[0] == 1);
-   EXPECT_TRUE(myArray[1] == 2);
-   EXPECT_TRUE(myArray[2] == 3);
+   EXPECT_TRUE(myArray[0] == 7);
+   EXPECT_TRUE(myArray[1] == 6);
+   EXPECT_TRUE(myArray[2] == 5);
    EXPECT_TRUE(myArray[3] == 4);
-   EXPECT_TRUE(myArray[4] == 5);
-   EXPECT_TRUE(myArray[5] == 6);
-   EXPECT_TRUE(myArray[6] == 7);
-   EXPECT_TRUE(myArray[7] == 8);
+   EXPECT_TRUE(myArray[4] == 3);
+   EXPECT_TRUE(myArray[5] == 2);
+   EXPECT_TRUE(myArray[6] == 1);
+   EXPECT_TRUE(myArray[7] == 0);
    free(myArray);
 
    q9.push(9);
 
    myArray = q9.toArray();
    EXPECT_FALSE(myArray == NULL);
-   EXPECT_TRUE(myArray[0] == 1);
-   EXPECT_TRUE(myArray[1] == 2);
-   EXPECT_TRUE(myArray[2] == 3);
-   EXPECT_TRUE(myArray[3] == 4);
-   EXPECT_TRUE(myArray[4] == 5);
-   EXPECT_TRUE(myArray[5] == 6);
-   EXPECT_TRUE(myArray[6] == 7);
-   EXPECT_TRUE(myArray[7] == 8);
-   EXPECT_TRUE(myArray[8] == 9);
+   EXPECT_TRUE(myArray[0] == 9);
+   EXPECT_TRUE(myArray[1] == 7);
+   EXPECT_TRUE(myArray[2] == 6);
+   EXPECT_TRUE(myArray[3] == 5);
+   EXPECT_TRUE(myArray[4] == 4);
+   EXPECT_TRUE(myArray[5] == 3);
+   EXPECT_TRUE(myArray[6] == 2);
+   EXPECT_TRUE(myArray[7] == 1);
+   EXPECT_TRUE(myArray[8] == 0);
    free(myArray);
 }
 // END   TESTS: toArray
