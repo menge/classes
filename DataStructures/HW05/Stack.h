@@ -32,7 +32,7 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: None
        */
       void push(T value) {
-         ll.appendTail(value);
+         ll.insertHead(value);
       }
 
       /* Element is popped and returned from head of stack.
