@@ -9,7 +9,7 @@ char* integer2char(unsigned int number, unsigned int base) {
     int length;
 
     if (number == 0) {
-        length = 1;
+        length = 2;
     }
     else {
         length = floor(log(number)/log(base)) + 1 + 1;
