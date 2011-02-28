@@ -16,12 +16,22 @@ HW03 - Linked List
 ================================================================================
 Create a doubly linked list class.
 
+================================================================================
+HW04 - Linked List with templates
+================================================================================
+Take work from HW03 and templatize them
+
+================================================================================
+HW05 - Queues and Stacks using LikedList implementation + exceptions
+================================================================================
+Create a Queue and Stack implementation using previous Linked Lists.
+Also introduce use of exceptions
+
+================================================================================
+HW06 - Trees and Heaps
+================================================================================
+Introduction to trees, and implementation of a heap
+
 >>>TODO<<<
-Linked Lists
-Stacks
-Queues
-Trees
-Heaps
 Binary Search Trees
 Hashtables
-templates
