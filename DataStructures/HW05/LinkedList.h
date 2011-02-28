@@ -22,10 +22,6 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: object's members variables are set to default values ("", 0s)
        */
       LinkedList() {
-         head = NULL;
-         tail = NULL;
-         cursor = NULL;
-         numElements = 0;
       }
 
       /* Account destructor
@@ -33,9 +29,6 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: Any allocated memory in object is freed
        */
       ~LinkedList() {
-         while (!isEmpty()) {
-            remove();
-         }
       }
 
       /* Insert an element into the linked list before the current cursor postition. Inserted element becomes the new cursor.
@@ -47,42 +40,6 @@ namespace net_oatsnet_class_datastructures {
        *                 numElements is updated appropriately
        */
       void insert(T value) {
-         Node<T> *p = new Node<T>;
-         p->data = value;
-
-         /* if cursor is NULL, try to set it to head */
-         if (cursor == NULL) {
-            cursor = head;
-         }
-
-         /* if cursor is still NULL, then we have an empty list */
-         if (cursor == NULL) {
-            head = p;
-            tail = p;
-            p->next = NULL;
-            p->prev = NULL;
-         }
-         /* cursor exists... insert in front of it */
-         else {
-            p->next = cursor;
-            p->prev = cursor->prev;
-
-            /* is p is the new head */
-            if (p->prev == NULL) {
-               head = p;
-            }
-            else {
-               p->prev->next = p;
-            }
-
-            cursor->prev = p;
-         }
-
-         /* p is our new cursor */
-         cursor = p;
-
-         /* we've added, so update count */
-         numElements += 1;
       }
 
 
@@ -94,8 +51,6 @@ namespace net_oatsnet_class_datastructures {
        *                 numElements is updated appropriately
        */
       void insertHead(T value) {
-         setHead();
-         insert(value);
       }
 
       /* Append an element into the linked list after the current cursor postition. Appended element becomes the new cursor.
@@ -107,42 +62,6 @@ namespace net_oatsnet_class_datastructures {
        *                 numElements is updated appropriately
        */
       void append(T value) {
-         Node<T> *p = new Node<T>;
-         p->data = value;
-
-         /* if cursor is NULL, try to set it to tail */
-         if (cursor == NULL) {
-            cursor = tail;
-         }
-
-         /* if cursor is still NULL, then we have an empty list */
-         if (cursor == NULL) {
-            head = p;
-            tail = p;
-            p->next = NULL;
-            p->prev = NULL;
-         }
-         /* cursor exists... append after it */
-         else {
-            p->next = cursor->next;
-            p->prev = cursor;
-
-            /* check to see if p is the new tail */
-            if (p->next == NULL) {
-               tail = p;
-            }
-            else {
-               p->next->prev = p;
-            }
-
-            cursor->next = p;
-         }
-
-         /* p is our new cursor */
-         cursor = p;
-
-         /* we've added, so update count */
-         numElements += 1;
       }
 
       /* Append an element at the end of the linked list. Appended element becomes the new cursor.
@@ -153,8 +72,6 @@ namespace net_oatsnet_class_datastructures {
        *                 numElements is updated appropriately
        */
       void appendTail(T value) {
-         setTail();
-         append(value);
       }
 
       /* Removes the current cursor. Cursor then becomes the next in the list if not null, otherwise, becomes previous.
@@ -168,53 +85,6 @@ namespace net_oatsnet_class_datastructures {
        *                 numElements is updated appropriately
        */
       void remove() {
-         if (numElements == 0) {
-            /* nothing to delete, so we're outta here */
-            return;
-         }
-
-         /* deleting last element */
-         if (numElements == 1) {
-            delete cursor;
-
-            head = NULL;
-            tail = NULL;
-            cursor = NULL;
-            numElements = 0;
-            return;
-         }
-
-         /* there's at least 2 elemets left */
-         if (cursor == NULL) {
-            cursor = tail;
-         }
-
-         //Save cursor to be deleted later
-         Node<T> *deleteme = cursor;
-
-         // reconfigure pointers and assign new cursor
-         if (cursor == head) {
-            head = cursor->next;
-            cursor->next->prev = NULL;
-
-            cursor = head;
-         }
-         else if (cursor == tail) {
-            tail = cursor->prev;
-            cursor->prev->next = NULL;
-
-            cursor = tail;
-         }
-         else {
-            cursor->prev->next = cursor->next;
-            cursor->next->prev = cursor->prev;
-
-            cursor = cursor->next;
-         }
-
-         /* now we can delete node and update count */
-         delete deleteme;
-         numElements -= 1;
       }
 
       /* Returns true if no elements exist in LinkedList, false otherwise
@@ -224,10 +94,7 @@ namespace net_oatsnet_class_datastructures {
                   false - LinkedList is not empty
        */
       bool isEmpty() {
-         if (numElements == 0) {
-            return true;
-         }
-         return false;
+         return true;
       }
 
       /* Searches through the linked list and returns a pointer to the data if found
@@ -237,13 +104,6 @@ namespace net_oatsnet_class_datastructures {
        * Returns: pointer pointing to the data if found, NULL if not found
        */
       T* search(T value) {
-         for (Node<T> *p = head; p != NULL; p = p->next) {
-            if (p->data == value) {
-               /* we've found a match */
-               cursor = p;
-               return &(cursor->data);
-            }
-         }
          return NULL;
       }
 
@@ -253,7 +113,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: number of elements in list
        */
       int getNumElements() {
-         return numElements;
+         return 0;
       }
 
       /* Sets cursor to head and returns a pointer to the value it holds
@@ -262,12 +122,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: a pointer to the value stored in the head Node (note: this can be NULL when list is empty)
        */
       T* setHead() {
-         if (head == NULL) {
-            return NULL;
-         }
-
-         cursor = head;
-         return &(cursor->data);
+         return NULL;
       }
 
       /* Sets cursor to tail and returns a pointer to the value it holds
@@ -276,12 +131,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: a pointer to the value stored in the tail Node (note: this can be NULL when list is empty)
        */
       T* setTail() {
-         if (tail == NULL) {
-            return NULL;
-         }
-
-         cursor = tail;
-         return &(cursor->data);
+         return NULL;
       }
 
       /* Sets the cursor to what is previous to it, and returns a pointer to the value stored in the new cursor
@@ -290,12 +140,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: a pointer to the data the new cursor points to (note: this can be NULL when list is empty or going prev from HEAD)
        */
       T* prev() {
-         if (cursor == NULL) {
-            return NULL;
-         }
-
-         cursor = cursor->prev;
-         return &(cursor->data);
+         return NULL;
       }
 
       /* Sets the cursor to what is next to it, and returns a pointer to the value stored in the new cursor
@@ -304,12 +149,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: a pointer to the data the new cursor points to (note: this can be NULL when list is empty or going next from TAIL)
        */
       T* next() {
-         if (cursor == NULL) {
-            return NULL;
-         }
-
-         cursor = cursor->next;
-         return &(cursor->data);
+         return NULL;
       }
 
       /* Returns pointer to data of item that cursor points to. If cursor is not valid, will return NULL.
@@ -318,11 +158,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: a pointer to the data that the cursor points to (note: this can be NULL when list is empty or when cursor is already NULL)
        */
       T* getCursorData() {
-         if (cursor == NULL) {
-            return NULL;
-         }
-
-         return &(cursor->data);
+         return NULL;
       }
 
       /* prints out diagnostic information about list

@@ -17,7 +17,6 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: A stack is ready to use
        */
       Stack() {
-         ll = LinkedList<T>();
       }
 
       /* Account destructor
@@ -32,7 +31,6 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: None
        */
       void push(T value) {
-         ll.insertHead(value);
       }
 
       /* Element is popped and returned from head of stack.
@@ -42,16 +40,7 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: element is dequeued and returned
        */
       T pop() {
-         T retval;
-
-         if (isEmpty()) {
-            // TODO: make a real exception?
-            throw string("Cannot remove from empty list");
-         }
-
-         retval = *(ll.setHead());
-         ll.remove();
-
+         T retval = this->pop();
          return retval;
       }
 
@@ -62,7 +51,7 @@ namespace net_oatsnet_class_datastructures {
                   false - stack is not empty
        */
       bool isEmpty() {
-         return ll.isEmpty();
+         return true;
       }
 
 
@@ -75,25 +64,7 @@ namespace net_oatsnet_class_datastructures {
        *          pointer to array T is returned
        */
       T* toArray() {
-         T *newArray;
-
-         if (getNumElements() == 0) {
-            return NULL;
-         }
-
-         newArray = (T *) malloc(getNumElements() * sizeof(T));
-
-         if (newArray == 0) {
-            perror("Failed to allocate");
-         }
-
-         ll.setHead();
-         for (int i = 0; i < getNumElements(); i++, ll.next()) {
-            T *p = ll.getCursorData();
-            newArray[i] = *p;
-         }
-
-         return newArray;
+         return NULL;
       }
 
       /* Returns the number of elements in the stack
@@ -102,7 +73,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: number of elements in queue
        */
       int getNumElements() {
-         return ll.getNumElements();
+         return 0;
       }
 
    private:

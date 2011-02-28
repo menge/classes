@@ -17,7 +17,6 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: A queue is ready to use
        */
       Queue() {
-         ll = LinkedList<T>();
       }
 
       /* Account destructor
@@ -32,7 +31,6 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: None
        */
       void enqueue(T value) {
-         ll.appendTail(value);
       }
 
       /* Element is dequeued and returned from head of queue.
@@ -42,17 +40,8 @@ namespace net_oatsnet_class_datastructures {
        * Post-condition: element is dequeued and returned
        */
       T dequeue() {
-         T retval;
-
-         if (isEmpty()) {
-            // TODO: make a real exception?
-            throw string("Cannot dequeue from empty list");
-         }
-
-         retval = *(ll.setHead());
-         ll.remove();
-
-         return retval;
+         T asdf = this->dequeue();
+         return asdf;
       }
 
       /* Returns true if no elements exist in Queue, false if otherwise
@@ -62,7 +51,7 @@ namespace net_oatsnet_class_datastructures {
                   false - Queue is not empty
        */
       bool isEmpty() {
-         return ll.isEmpty();
+         return false;
       }
 
 
@@ -75,25 +64,7 @@ namespace net_oatsnet_class_datastructures {
        *          pointer to array T is returned
        */
       T* toArray() {
-         T *newArray;
-
-         if (getNumElements() == 0) {
-            return NULL;
-         }
-
-         newArray = (T *) malloc(getNumElements() * sizeof(T));
-
-         if (newArray == 0) {
-            perror("Failed to allocate");
-         }
-
-         ll.setHead();
-         for (int i = 0; i < getNumElements(); i++, ll.next()) {
-            T *p = ll.getCursorData();
-            newArray[i] = *p;
-         }
-
-         return newArray;
+         return NULL;
       }
 
       /* Returns the number of elements in the queue
@@ -102,7 +73,7 @@ namespace net_oatsnet_class_datastructures {
        * Returns: number of elements in queue
        */
       int getNumElements() {
-         return ll.getNumElements();
+         return 0;
       }
 
    private:
