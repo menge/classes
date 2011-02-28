@@ -27,8 +27,11 @@ HW05 - Queues and Stacks using LikedList implementation + exceptions
 Create a Queue and Stack implementation using previous Linked Lists.
 Also introduce use of exceptions
 
+================================================================================
+HW06 - Trees and Heaps
+================================================================================
+Introduction to trees, and implementation of a heap
+
 >>>TODO<<<
-Trees
-Heaps
 Binary Search Trees
 Hashtables
